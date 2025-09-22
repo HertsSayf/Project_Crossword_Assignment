@@ -8,7 +8,7 @@ In terms of usability and quality, we will be creating a simple ad visually clea
 -	User profiles: 
 1)	Name: Liam Wigley 
 About: Liam is a 12-year-old secondary school student who enjoys word games but sometimes struggles with spelling and remembering definitions. He uses computers at school and is comfortable with typing and using a mousepad along with touchscreen interactions. 
-Relation to the project: Liam wants the crossword to be colourful, fin and easy to understand without needing complex instructions. For Liam the crossword is both entertaining and a way to help improve his vocabulary during his break or in class. 
+Relation to the project: Liam wants the crossword to be colourful, fun and easy to understand without needing complex instructions. For Liam the crossword is both entertaining and a way to help improve his vocabulary during his break or in class. 
 
 2)	Name: Fred Coker 
 About: Fred is a 40-year-old English teacher working at a secondary school. he is looking for a way to make lessons more engaging and interactive in order to support his students learning. Fred values tools that are easy to use and reliable along with-it being child friendly.
@@ -17,7 +17,7 @@ Relation to the project: For Fred the crossword is a class activity that can hel
 -	Functional requirements: the crossword will provide a fully interactive grid where players can click on cells which are numbered and reveal clues in relation to the puzzle. once a puzzle has been completed successfully the application will display a completion message to confirm the correct move. alternatively if a move is wrong it will either not fit or display an error message. In order for the game to be reuable, players will have the option to restart the game again. An additional feature under consideration is to add a diificulty system in which the user can pick different difficutly levels for the crossword which would vary in size and complexity. Wilth all these functions in place and working together should create a smooth and engaging experince for users. 
 
 
--	Nonfunctional requirements:
+-	Nonfunctional requirements: The crossword will be created with usability and being accessible as its main goal. this ensures that the  target audiance can use the software  to the best of its ability. The interface will include a simple, vivd layout with visible text and simple controls so that users can quickly understand how to play without needing any complex instructions. The application will be able to run on both desktop and tablets, making it accesssable for students and teschers if they want to play from home or away from a computer. The overall design will follow a professional and school appropriate aesthetic to prevent making the game too distracting, reliable and enjoyable for both teachers and students.
 
 
 -	Mock-ups: (can be done on another document)
