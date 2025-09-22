@@ -26,6 +26,9 @@ Relation to the project: For Fred the crossword is a class activity that can hel
 
 
 -	Potential risks to the project’s success: (not including time management)
+  There are some potential risks involved affecting the success of the project; if we were to rank them in order it would be:
+ 	1. Technical Knowledge, we all have limited knowdlege and experience in python and coding in general. This could cause delays and issues in development as we would spend time trying to figure out how to implement the code and our ideas. This is the main issue for our project due to lack of knowledge and
+
 
 -	Overall test plan:
 
