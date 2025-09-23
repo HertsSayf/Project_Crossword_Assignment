@@ -35,5 +35,5 @@ Relation to the project: For Fred the crossword is a class activity that can hel
   4. Our releiance on external libraries might cause compatibility issues or even if we use external images or other things there could be an issue due to licensing. Also another, issue we will face is conflicting changes on GitHub when we all commit changes at the same time.
 
 
--	Overall test plan:
+-	Overall test plan (Submitted in the format of a table in a seperate file)
 
