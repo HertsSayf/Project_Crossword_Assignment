@@ -30,11 +30,14 @@ Relation to the project: For Fred the crossword is a class activity that can hel
 
 -	Potential risks to the project’s success: (not including time management)
   There are some potential risks involved affecting the success of the project; if we were to rank them in order it would be:
+
  	1. Technical Knowledge, we all have limited knowdlege and experience in python and coding in general. This could cause delays and issues in development as we would spend time trying to figure out how to implement the code and our ideas. This is the main issue for our project due to lack of knowledge and experiecne we may not have it to a great quality.
   2. Trying to add optional features and things to make the game better will be hard for us due to the lack of time given to complete the project. If we spend too much resources on one feature then we won't be able to focus on important parts and developing the functionality of the game
   3. Testing issues may occur due to various devices not being compatible with our game. Also, we will not be able to recieve real user feedback from our target audience which leads to less usabilty improvments.
   4. Our releiance on external libraries might cause compatibility issues or even if we use external images or other things there could be an issue due to licensing. Also another, issue we will face is conflicting changes on GitHub when we all commit changes at the same time.
 
+
+Our software development strategy is the spiral methodology, which contains elements of other methods such as waterfall with its clearly defined phases, combined with an iterative development process. It is great for projects that contain a risk element to it, largely used for complicated, expensive projects. The main advantage of the spiral model is the “coil with many loops”. When the spiral model is visually presented, you can see these loops. This is to show the iterative process that you can go back to prior stages even after moving on and correct any mistakes and improve further. This means we can gradually release stages of the new system and make refinements, too, as time passes. 
 
 -	Overall test plan (Submitted in the format of a table in a seperate file)
 
