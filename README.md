@@ -20,7 +20,7 @@ Relation to the project: For Fred the crossword is a class activity that can hel
 -	Nonfunctional requirements: The crossword will be created with usability and being accessible as its main goal. this ensures that the  target audiance can use the software  to the best of its ability. The interface will include a simple, vivd layout with visible text and simple controls so that users can quickly understand how to play without needing any complex instructions. The application will be able to run on both desktop and tablets, making it accesssable for students and teschers if they want to play from home or away from a computer. The overall design will follow a professional and school appropriate aesthetic to prevent making the game too distracting, reliable and enjoyable for both teachers and students.
 
 
--	Mock-ups: (can be done on another document)
+-	Mock-ups:
 -	<img width="974" height="765" alt="image" src="https://github.com/user-attachments/assets/ccd992e4-4920-4043-865b-56c85617ce28" />
 
 
