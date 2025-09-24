@@ -26,7 +26,9 @@ Relation to the project: For Fred the crossword is a class activity that can hel
 
 
 
--	Basic storyboard: 
+-	Basic storyboard:
+-	<img width="1131" height="611" alt="image" src="https://github.com/user-attachments/assets/d52438ce-62c4-4bbd-bd01-dd383fe9ac9b" />
+
 
 
 -	Potential risks to the project’s success: (not including time management)
