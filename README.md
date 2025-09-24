@@ -21,7 +21,8 @@ Relation to the project: For Fred the crossword is a class activity that can hel
 
 
 -	Mock-ups: (can be done on another document)
--	<img width="971" height="639" alt="image" src="https://github.com/user-attachments/assets/85c87c68-5099-455e-9694-ae962671b143" />
+-	<img width="974" height="765" alt="image" src="https://github.com/user-attachments/assets/ccd992e4-4920-4043-865b-56c85617ce28" />
+
 
 
 -	Basic storyboard: 
