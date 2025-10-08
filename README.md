@@ -9,9 +9,8 @@ In terms of usability and quality, we will be creating a simple ad visually clea
 <img width="374" height="543" alt="image" src="https://github.com/user-attachments/assets/4086df15-c5d0-4309-822a-a725b45cf385" />
 
 
-2)	Name: Fred Coker 
-About: Fred is a 40-year-old English teacher working at a secondary school. he is looking for a way to make lessons more engaging and interactive in order to support his students learning. Fred values tools that are easy to use and reliable along with-it being child friendly.
-Relation to the project: For Fred the crossword is a class activity that can help achieve his goal of making classes more engaging and interactive. He needs the application to have a clean, professional layout with an option to restart the puzzle between classes. Fred appreciates software that is simple and clear from distractions as this helps keeps his students focused. 	
+<img width="385" height="540" alt="image" src="https://github.com/user-attachments/assets/4d060536-335d-4129-add2-edc411c75c34" />
+
 
 -	Functional requirements: the crossword will provide a grid where players can see how long the word is by counting the number of cells per number and enter their answer into  bar at the bottom of the crossword. once a puzzle has been completed successfully the application will display a completion message to confirm the correct move. alternatively if a move is wrong it will  display an error message. In order for the game to be reusable, players will have the option to restart the game again. An additional feature  is to add a diificulty system in which the user can pick between 3 difficulty levels for the crossword. These levels  would vary in size and complexity. Wilth all these functions in place and working together should create a smooth and engaging experince for our users. 
 
