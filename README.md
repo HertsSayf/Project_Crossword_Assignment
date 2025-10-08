@@ -6,9 +6,8 @@
 In terms of usability and quality, we will be creating a simple ad visually clear interface, with a grid, readable text and easy colour corresponding navigation between clues. Feedback would be supportive helping the player solve the problem. Furthermore if we manage to complete and get the core functionality of the game working, we shall attempt to add 2 differrent versions, one harder than the other,  by manually making 3 crosswords one with simple and smaller words for the student and 2 other crosswords that have bigger and more complex words to aid ofr the teacher and if the student wants to try something more challenging. This project aims to provide a both entertaining and educational experience and viable tool that enhances vocabulary, spelling and problem-solving skills. 
 
 -	User profiles: 
-1)	Name: Liam Wigley 
-About: Liam is a 12-year-old secondary school student who enjoys word games but sometimes struggles with spelling and remembering definitions. He uses computers at school and is comfortable with typing and using a mousepad along with touchscreen interactions. 
-Relation to the project: Liam wants the crossword to be colourful, fun and easy to understand without needing complex instructions. For Liam the crossword is both entertaining and a way to help improve his vocabulary during his break or in class. 
+<img width="374" height="543" alt="image" src="https://github.com/user-attachments/assets/4086df15-c5d0-4309-822a-a725b45cf385" />
+
 
 2)	Name: Fred Coker 
 About: Fred is a 40-year-old English teacher working at a secondary school. he is looking for a way to make lessons more engaging and interactive in order to support his students learning. Fred values tools that are easy to use and reliable along with-it being child friendly.
