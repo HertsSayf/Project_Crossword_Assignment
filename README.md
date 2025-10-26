@@ -53,8 +53,17 @@ Once we get the game up and running, we plan to add 2 extra difficuties:
  - Minimum 4GB RAM
  - Minimum resolution of 1280×720
  - Keyboard and Mouse
-  
 
+### Software
+ - Windows 10 or newer
+ - MacOS 10.15 or newer
+ - Google chrome
+ - Microsoft edge
+ - Safari
+ - HTML
+ - CSS
+ - Pyhton Flask 
+  
 
 ## Mock-ups:
 -	<img width="936" height="742" alt="image" src="https://github.com/user-attachments/assets/f5393e46-f750-4a3c-ae62-8876424ce237" />
