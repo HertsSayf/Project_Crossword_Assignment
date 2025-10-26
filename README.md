@@ -2,11 +2,12 @@
 ## Project overview
 Our group has chosen to create a web based crossword game designed for children aged 10-14 (although were planning to make a sepertate version for adults). The aim is to make an educational and fun tool that helps the users improve their vocabulary, spelling and problem solving skills through the interactive gameplay.
 
+## Overall specification
+The overall aim of this project is to design an engaging, educational web-based crossword that’s aimed at children aged 10 – 14 years of age. Our system will allow players to Input their answers into a designated bar along with having numbered squares which would correspond to clues on the side. These clues would be revealed and answered by clicking on the appropriate number. users will be able to type answers into a small bar and if correct will be added to the grid. If the input is incorrect the system will let the user know that what they tped was wrong and that answer wont be added to the grid. This application will be developed using HTML, CSS and python. The finished product will be deployed via GitHub pages.
+
 ## Target audience
  - Age group: 10 - 14 years old
  - Purpose: To help kids stregnthen thier fundamentals like vocabulary and spelling skills through an interactive experience
- 
--	Overall Specification:  The overall aim of this project is to design an engaging, educational web-based crossword that’s aimed at children aged 10 – 14 years of age. Our system will allow players to Input their answers into a designated bar along with having numbered squares which would correspond to clues on the side. These clues would be revealed and answered by clicking on the appropriate number. Players will be able to type answers into a small bar and if correct will be added to the grid. If the input is incorrect the system will let the user know that what they tped was wrong and that answer wont be added to the grid. This application will be developed using HTML, CSS and python. The finished product will be deployed via GitHub pages.
 
 ## Project Design and objectives
 The game is going to feature a simple and visually clear interface with:
