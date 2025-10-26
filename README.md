@@ -30,7 +30,7 @@ Once we get the game up and running, we plan to add 2 extra difficuties:
 -	Nonfunctional requirements: The crossword will be created with usability and being accessible as its main goal. this ensures that the  target audiance can use the software  to the best of its ability. The interface will include a simple, vivd layout with visible text and simple controls so that users can quickly understand how to play without needing any complex instructions. The application will be able to run on desktop, making it accesssable for students and teachers if they want to play from home. The overall design will follow a professional and school appropriate aesthetic to prevent making the game too distracting, reliable and enjoyable for both teachers and students.
 
 
--	Mock-ups:
+## Mock-ups:
 -	<img width="936" height="742" alt="image" src="https://github.com/user-attachments/assets/f5393e46-f750-4a3c-ae62-8876424ce237" />
 
 
