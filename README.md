@@ -3,9 +3,17 @@
 -	Target audience: children aged between 10 – 14 years because digital crosswords are good for developing vocabulary, spelling and problem skills. Crosswords can also be used as an educational tool in schools to further develop a student’s basic functional skills. 
 -	Overall Specification:  The overall aim of this project is to design an engaging, educational web-based crossword that’s aimed at children aged 10 – 14 years of age. Our system will allow players to Input their answers into a designated bar along with having numbered squares which would correspond to clues on the side. These clues would be revealed and answered by clicking on the appropriate number. Players will be able to type answers into a small bar and if correct will be added to the grid. If the input is incorrect the system will let the user know that what they tped was wrong and that answer wont be added to the grid. This application will be developed using HTML, CSS and python. The finished product will be deployed via GitHub pages.
 
-In terms of usability and quality, we will be creating a simple ad visually clear interface, with a grid, readable text and easy colour corresponding navigation between clues. Feedback would be supportive helping the player solve the problem. Furthermore if we manage to complete and get the core functionality of the game working, we shall attempt to add 2 differrent versions, one harder than the other,  by manually making 3 crosswords one with simple and smaller words for the student and 2 other crosswords that have bigger and more complex words to aid ofr the teacher and if the student wants to try something more challenging. This project aims to provide a both entertaining and educational experience and viable tool that enhances vocabulary, spelling and problem-solving skills. 
+**Project Design and objectives**
+The game is going to feature a simple and visually clear interface with:
+  - A grid layout
+  - Readable text
+  - Easy colour coded navigation between clues
+Feedback would be helpful, guiding players through the crossword.
+Once we get the game up and running, we plan to add 2 extra difficuties:
+  - Easy: shorter more simpler words (tailored for students)
+  - Hard: Longer more challenging words (better for teachers)
 
--	User profiles: 
+-**User profiles:**
 <img width="374" height="543" alt="image" src="https://github.com/user-attachments/assets/4086df15-c5d0-4309-822a-a725b45cf385" />
 
 
