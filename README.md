@@ -29,8 +29,17 @@ Once we get the game up and running, we plan to add 2 extra difficuties:
 
 ## Functional and nonfuncional requirments 
 
--	Functional requirements: the crossword will provide a grid where players can see how long the word is by counting the number of cells per number and enter their answer into  bar at the bottom of the crossword. once a puzzle has been completed successfully the application will display a completion message to confirm the correct move. alternatively if a move is wrong it will  display an error message. In order for the game to be reusable, players will have the option to restart the game again. An additional feature  is to add a diificulty system in which the user can pick between 3 difficulty levels for the crossword. These levels  would vary in size and complexity. Wilth all these functions in place and working together should create a smooth and engaging experince for our users. 
-
+ ### Functional 
+  - The crossword will be in a gird layout where players can see the legnth of the word by counting the number of cells
+  - Players can enter their ansewer into an input bar below the grid
+  - when a player inputs an answer either a :
+                                             - completion answer will appear if correct 
+                                             - and error message will appear if incorrect 
+  - Once all words are guessed correctly, a final completion messsage will pop up to confirm the puzzle is complete
+  - Users will have the option to restart the game at any time by ressing the reset button
+  - a difficulty section including easy, medium and hard which would vary the grid sizes and complexity of the words
+  - the corssword will have numbered and coloured cells that correspond to a list of culues displayed on the side of the grid
+  - The crossword will be functional on web broswers making it compatible on desktop and Laptop
 
 -	Nonfunctional requirements: The crossword will be created with usability and being accessible as its main goal. this ensures that the  target audiance can use the software  to the best of its ability. The interface will include a simple, vivd layout with visible text and simple controls so that users can quickly understand how to play without needing any complex instructions. The application will be able to run on desktop, making it accesssable for students and teachers if they want to play from home. The overall design will follow a professional and school appropriate aesthetic to prevent making the game too distracting, reliable and enjoyable for both teachers and students.
 
