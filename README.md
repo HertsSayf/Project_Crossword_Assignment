@@ -15,13 +15,14 @@ Once we get the game up and running, we plan to add 2 extra difficuties:
   - Hard: Longer more challenging words (better for teachers)
 
 
--**User profiles:**
+## User profiles:
 <img width="374" height="543" alt="image" src="https://github.com/user-attachments/assets/4086df15-c5d0-4309-822a-a725b45cf385" />
 
 
 <img width="380" height="543" alt="image" src="https://github.com/user-attachments/assets/24c46e00-629f-4a11-9e7a-5ab7c812970a" />
 
 
+## Functional and nonfuncional requirments 
 
 -	Functional requirements: the crossword will provide a grid where players can see how long the word is by counting the number of cells per number and enter their answer into  bar at the bottom of the crossword. once a puzzle has been completed successfully the application will display a completion message to confirm the correct move. alternatively if a move is wrong it will  display an error message. In order for the game to be reusable, players will have the option to restart the game again. An additional feature  is to add a diificulty system in which the user can pick between 3 difficulty levels for the crossword. These levels  would vary in size and complexity. Wilth all these functions in place and working together should create a smooth and engaging experince for our users. 
 
