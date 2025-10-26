@@ -32,9 +32,7 @@ Once we get the game up and running, we plan to add 2 extra difficuties:
  ### Functional 
   - The crossword will be in a gird layout where players can see the legnth of the word by counting the number of cells
   - Players can enter their ansewer into an input bar below the grid
-  - when a player inputs an answer either a :
-                                             - completion answer will appear if correct 
-                                             - and error message will appear if incorrect 
+  - when a player inputs an answer either a completion message  if correct or an error message if incorrect 
   - Once all words are guessed correctly, a final completion messsage will pop up to confirm the puzzle is complete
   - Users will have the option to restart the game at any time by ressing the reset button
   - a difficulty section including easy, medium and hard which would vary the grid sizes and complexity of the words
