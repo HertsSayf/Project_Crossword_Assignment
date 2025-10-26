@@ -1,6 +1,7 @@
 # Project_Crossword_Assignment
 -	Chosen project: Crossword  
--	Target audience: children aged between 10 – 14 years because digital crosswords are good for developing vocabulary, spelling and problem skills. Crosswords can also be used as an educational tool in schools to further develop a student’s basic functional skills. 
+-	Target audience: children aged between 10 – 14 years because digital crosswords are good for developing vocabulary, spelling and problem skills. Crosswords can also be used as an educational tool in schools to further develop a student’s basic functional skills.
+ 
 -	Overall Specification:  The overall aim of this project is to design an engaging, educational web-based crossword that’s aimed at children aged 10 – 14 years of age. Our system will allow players to Input their answers into a designated bar along with having numbered squares which would correspond to clues on the side. These clues would be revealed and answered by clicking on the appropriate number. Players will be able to type answers into a small bar and if correct will be added to the grid. If the input is incorrect the system will let the user know that what they tped was wrong and that answer wont be added to the grid. This application will be developed using HTML, CSS and python. The finished product will be deployed via GitHub pages.
 
 **Project Design and objectives**
@@ -12,6 +13,7 @@ Feedback would be helpful, guiding players through the crossword.
 Once we get the game up and running, we plan to add 2 extra difficuties:
   - Easy: shorter more simpler words (tailored for students)
   - Hard: Longer more challenging words (better for teachers)
+
 
 -**User profiles:**
 <img width="374" height="543" alt="image" src="https://github.com/user-attachments/assets/4086df15-c5d0-4309-822a-a725b45cf385" />
