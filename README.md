@@ -87,7 +87,10 @@ Once we get the game up and running, we plan to add 2 extra difficuties:
   4. Our reliance on external libraries might cause compatibility issues or even if we use external images or other things there could be an issue due to licensing. Also, another, issue we will   face is conflicting changes on GitHub when we all commit changes at the same time.
 
 
-Our software development strategy is the spiral methodology, which contains elements of other methods such as waterfall with its clearly defined phases, combined with an iterative development process. It is great for projects that contain a risk element to it, largely used for complicated, expensive projects. The main advantage of the spiral model is the “coil with many loops”. When the spiral model is visually presented, you can see these loops. This is to show the iterative process that you can go back to prior stages even after moving on and correct any mistakes and improve further. This means we can gradually release stages of the new system and make refinements, too, as time passes. 
+## Software development strategy
 
--	Overall test plan (Submitted in the format of a table in a seperate file)
+Our software development strategy is the spiral methodology, which contains elements of other methods such as waterfall with its clearly defined phases, combined with an iterative development process. It is great for projects that contain a risk element to it, largely used for complicated, expensive projects. The main advantage of the spiral model is the “coil with many loops”. When the spiral model is visually presented, you can see these loops. This is to show the iterative process that you can go back to prior stages even after moving on and correct any mistakes and improve further. This means we can gradually release stages of the new system and make refinements, too, as time passes.
+
+
+-	Overall test plan Submitted in the format of a table in a seperate file
 
