@@ -4,7 +4,7 @@
  
 -	Overall Specification:  The overall aim of this project is to design an engaging, educational web-based crossword that’s aimed at children aged 10 – 14 years of age. Our system will allow players to Input their answers into a designated bar along with having numbered squares which would correspond to clues on the side. These clues would be revealed and answered by clicking on the appropriate number. Players will be able to type answers into a small bar and if correct will be added to the grid. If the input is incorrect the system will let the user know that what they tped was wrong and that answer wont be added to the grid. This application will be developed using HTML, CSS and python. The finished product will be deployed via GitHub pages.
 
-**Project Design and objectives**
+## Project Design and objectives
 The game is going to feature a simple and visually clear interface with:
   - A grid layout
   - Readable text
