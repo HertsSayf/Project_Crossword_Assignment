@@ -63,6 +63,7 @@ Once we get the game up and running, we plan to add 2 extra difficuties:
  - HTML
  - CSS
  - Pyhton Flask 
+ - Microsoft Visual Studio Code
   
 
 ## Mock-ups:
