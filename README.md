@@ -31,21 +31,21 @@ Once we get the game up and running, we plan to add 2 extra difficulties:
 ## Functional and nonfuncional requirments 
 
  ### Functional 
-  - The crossword will be in a gird layout where players can see the legnth of the word by counting the number of cells
-  - Players can enter their ansewer into an input bar below the grid
-  - when a player inputs an answer either a completion message  if correct or an error message if incorrect will appear 
+  - The crossword will be in a grid layout where players can see the length of the word by counting the number of cells
+  - Players can enter their answer into an input bar below the grid
+  - when a player inputs an answer, either a completion message  if correct or an error message if incorrect will appear 
   - Once all words are guessed correctly, a final completion messsage will pop up to confirm the puzzle is complete
   - Users will have the option to restart the game at any time by ressing the reset button
   - a difficulty section including easy, medium and hard which would vary the grid sizes and complexity of the words
-  - the corssword will have numbered and coloured cells that correspond to a list of culues displayed on the side of the grid
-  - The crossword will be functional on web broswers making it compatible on desktop and Laptop
+  - the crossword will have numbered and coloured cells that correspond to a list of clues displayed on the side of the grid
+  - The crossword will be functional on web broswers making it compatible on desktop and Laptops
 
 ## Nonfunctional 
   - The interface will be simple, clear and easy to navigate so users can quickly understand how to play
-  - Designerd to be used by 10-14 year olds however by adding a difficulty system, older more intelligent people can play
-  - A simple and school appropriate desgin will keep the game engaging without being distracting
+  - Designed to be used by 10-14 year olds however by adding a difficulty system, older more intelligent people can play
+  - A simple and school appropriate design will keep the game engaging without being distracting
   - the system will be reliable and robust
-  - The system should be able to run on different operating systems e.g Mac OS, Windows.
+  - The system should be able to run on different operating systems e.g MacOS, Windows.
 
 ## System requirments 
 
@@ -63,7 +63,7 @@ Once we get the game up and running, we plan to add 2 extra difficulties:
  - Safari
  - HTML
  - CSS
- - Pyhton Flask 
+ - Python Flask 
  - Microsoft Visual Studio Code
   
 
@@ -86,7 +86,7 @@ Once we get the game up and running, we plan to add 2 extra difficulties:
     
   3. Testing issues may occur due to various devices not being compatible with our game. Also, we will not be able to receive real user feedback from our target audience which leads to less       usability improvements.
    
-  4. Our reliance on external libraries might cause compatibility issues or even if we use external images or other things there could be an issue due to licensing. Also, another, issue we will   face is conflicting changes on GitHub when we all commit changes at the same time.
+  4. Our reliance on external libraries might cause compatibility issues or even if we use external images or other things there could be an issue due to licensing. Also, another issue we will   face is conflicting changes on GitHub when we all commit changes at the same time.
 
 
 ## Software development strategy
