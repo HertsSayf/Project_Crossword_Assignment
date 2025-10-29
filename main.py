@@ -1,11 +1,14 @@
 import random
+import clues as clues_module
+import medium_clues as medium_clues_module
+import Hard_clues as hard_clues_module
 
 
 print ("Crazy Crosswords")
 
 from clues import clues
-from medium_clues import clues
-from hard_clues import clues
+from medium_clues import medium_clues
+from Hard_clues import Hard_clues
 
 
 grid = [
