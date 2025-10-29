@@ -1,3 +1,6 @@
+import random
+import clues.py as clues_module
+
 print ("Crazy Crosswords")
 
 grid = [
@@ -16,16 +19,7 @@ def display_grid():
 display_grid()
 
 word_list = ['PYTHON', 'JAVA', 'RUBY', 'SWIFT', 'KOTLIN']
-
-#im going to find a way to inser these clues form the clues.py file - Fayaaz
-# clues = {
-#    'PYTHON': 'A popular programming language known for its readability.', 
-#    'JAVA': 'A programming language that is class-based and object-oriented.',
-#    'RUBY': 'A dynamic, open source programming language with a focus on simplicity.',
-#    'SWIFT': 'A powerful programming language for iOS and macOS development.',
-#    'KOTLIN': 'A modern programming language that interoperates fully with Java.'
-#}
-
+clues = clues_module.clues
 
 
 def display_clues():
