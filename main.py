@@ -1,5 +1,5 @@
 import random
-import clues.py as clues_module
+
 
 print ("Crazy Crosswords")
 
