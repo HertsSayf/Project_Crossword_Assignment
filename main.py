@@ -3,6 +3,11 @@ import clues.py as clues_module
 
 print ("Crazy Crosswords")
 
+from clues import clues
+from medium_clues import clues
+from hard_clues import clues
+
+
 grid = [
     ['', '', '', '', ''],
     ['', '', '', '', ''], 
