@@ -28,12 +28,10 @@ def display_grid():
 word_list = ['PYTHON', 'JAVA', 'RUBY', 'SWIFT', 'KOTLIN']
 clues = clues_module.clues
 
-clues = {
-    “PYTHON”: “A popular programming language”,
-    “LOOP”: “A code structure that repeats”}
+
 
 for word, clue in clues.items():
-    print(f“Clue: {clue}”)
+    print (f“Clue: {clue}”))
     guess = input(“Your guess: “).upper()
 
     if guess == word:
