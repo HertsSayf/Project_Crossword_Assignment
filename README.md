@@ -69,8 +69,13 @@ Once we get the game up and running, we plan to add 2 extra difficulties:
 
 ## Mock-ups:
 -	<img width="936" height="742" alt="image" src="https://github.com/user-attachments/assets/f5393e46-f750-4a3c-ae62-8876424ce237" />
-- Easy Mode Grid Format Mock-up:
+## Easy Mode Grid Format Mock-up:
 - <img width="902" height="775" alt="image" src="https://github.com/user-attachments/assets/6d3e86ad-d663-4927-8a36-ddd9a281d497" />
+## Medium Mode Grid Format Mock-up
+- <img width="304" height="229" alt="image" src="https://github.com/user-attachments/assets/02cc6bcb-8b07-4c44-b6d5-2151f1f2384a" />
+
+## Hard Mode Grid Format Mock-up:
+- <img width="340" height="301" alt="image" src="https://github.com/user-attachments/assets/036701e5-ad42-4d19-863d-081c64b684ec" />
 
 
 
