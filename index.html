@@ -2,10 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Crossword Game</title>
+    <title>Crossword Assignment</title>
     <style>
-         body {
+        body {
             font-family: Arial, sans-serif;
             text-align: center;
             background-color: #f2f2f2;
-            }
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .grid {
+            display: inline-grid;
+            grid-template-columns: repeat(8, 35px);
+            gap: 2px;
+            margin: 20px 0;
+        }
+
+        .cell {
+            width: 35px;
+            height: 35px;
+            border: 1px solid #999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            background-color: white;
+        }
+
+        .empty {
+            background-color: #333;
+        }
+
