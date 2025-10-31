@@ -75,7 +75,8 @@ Once we get the game up and running, we plan to add 2 extra difficulties:
 - <img width="304" height="229" alt="image" src="https://github.com/user-attachments/assets/02cc6bcb-8b07-4c44-b6d5-2151f1f2384a" />
 
 ## Hard Mode Grid Format Mock-up:
-- <img width="340" height="301" alt="image" src="https://github.com/user-attachments/assets/036701e5-ad42-4d19-863d-081c64b684ec" />
+<img width="413" height="358" alt="image" src="https://github.com/user-attachments/assets/27187cd1-97cc-4c6d-a62c-72cf1edb88bf" />
+
 
 
 
