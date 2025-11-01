@@ -3,7 +3,7 @@
 | **Load crossword grid** | The full grid loads onto the website. | See Figure 1 | ✅ Pass |
 | **Input answer** | User can type answers into the grid. | See Figure 2 | ✅ Pass |
 | **Handle incorrcet answer** | System should dispay an error message and not include the word in the crossword. | Nothing happens  | ❌ Fail |
-| ** Puzzle timer** | User should be able to reset the puzzle. | no puzzle was added in the final product | ❌fail |
+| **Puzzle timer** | User should be able to reset the puzzle. | no puzzle was added in the final product | ❌fail |
 | **Usability** | The grid should be clear, not too hard for the target audience and easy to navigate . | grid is clear and easy to understand| ✅ Pass
 | **The grid updates after a word is added** |The grid should update after a word is added. | See Figure 6 | ✅ Pass 
 | **Accessibility** |Controls and instructions should be simple and easy to learn. | No controls and instructions given | ❌fail
