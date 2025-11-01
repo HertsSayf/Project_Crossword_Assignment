@@ -89,10 +89,11 @@
   <h1>Crazy Crosswords</h1>
   <form method="POST">
     <label><b>Choose difficulty:</b></label>
-    <select name="difficulty" onchange="this.form.submit()">
-      <option value="easy" {% if difficulty == 'easy' %}selected{% endif %}>Easy</option>
-      <option value="medium" {% if difficulty == 'medium' %}selected{% endif %}>Medium</option>
-    </select>
+<select name="difficulty" onchange="this.form.submit()">
+  <option value="easy" {% if difficulty == 'easy' %}selected{% endif %}>Easy</option>
+  <option value="medium" {% if difficulty == 'medium' %}selected{% endif %}>Medium</option>
+  <option value="hard" {% if difficulty == 'hard' %}selected{% endif %}>Hard</option>
+</select>
   </form>
 
   <div class="grid">
@@ -130,3 +131,4 @@
   </ul>
 </body>
 </html>
+
