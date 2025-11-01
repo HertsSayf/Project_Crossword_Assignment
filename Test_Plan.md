@@ -3,13 +3,12 @@
 | **Load crossword grid** | The full grid loads onto the website. | See Figure 1 | ✅ Pass |
 | **Input answer** | User can type answers into the grid. | See Figure 2 | ✅ Pass |
 | **Handle incorrcet answer** | System should dispay an error message and not include the word in the crossword. | Nothing happens  | ❌ Fail |
-| **Reset Puzzle** | User should be able to reset the puzzle. | See Figure 4 | ✅ Pass/❌fail |
-| **Usability** | The grid should be clear, not too hard for the target audience and easy to navigate . | See Figure 5 | ✅ Pass/❌fail |
-| **Compatibility** | User can type answers into the grid. | See Figure 6 | ✅ Pass/❌fail |
-| **Accessibility** |Controls and instructions should be simple and easy to learn. | See Figure 7 | ✅ Pass/❌fail |
-| **Default difficulty** | default difficulty should be easy. | See Figure 8 | ✅ Pass/❌fail |
-| **Change difficulty** | when difficulty is changed the grid should update to the desired version. | See Figure 9 | ✅ Pass/❌fail |
-| **Input answer** | User can type answers into the grid. | See Figure 10 | ✅ Pass/❌fail |
+| ** Puzzle timer** | User should be able to reset the puzzle. | no puzzle was added in the final product | ❌fail |
+| **Usability** | The grid should be clear, not too hard for the target audience and easy to navigate . | grid is clear and easy to understand| ✅ Pass
+| **The grid updates after a word is added** |The grid should update after a word is added. | See Figure 6 | ✅ Pass 
+| **Accessibility** |Controls and instructions should be simple and easy to learn. | No controls and instructions given | ❌fail
+| **Default difficulty** | default difficulty should be easy. | default difficulty is easy| ✅ Pass/
+| **Change difficulty** | when difficulty is changed the grid should update to the desired version. | | ✅ Pass
 
 **Figure 1:** Grid loads successfully
 <img width="959" height="539" alt="image" src="https://github.com/user-attachments/assets/f3f4c52d-6721-43f4-bf96-6229237096b3" />
