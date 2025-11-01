@@ -20,7 +20,15 @@ medium_clues = {
     'LOOP': 'A way to repeat a block of code several times until a condition is met.'
 }
 
-clue_sets = {"easy": easy_clues, "medium": medium_clues}
+hard_clues = {
+    'COMPILE': 'Turning your code into something the computer can actually run.',
+    'ENCRYPTION': 'The process of scrambling information so only those with the key can read it.',
+    'ALGORITHM': 'A logical set of steps used to solve a problem or perform a task.',
+    'RECURSION': 'When a function calls itself to solve a problem.',
+    'DEBUGGING': 'The process of finding and fixing errors in code.'
+}
+
+clue_sets = {"easy": easy_clues, "medium": medium_clues, "hard": hard_clues}
 
 
 #Grid Builder - Builds grids using coordinates
@@ -40,7 +48,7 @@ def build_grid(words):
     return grid
 
 
-#Grid Contents
+##Grid Contents
 
 easy_words = [
     ("SWIFT", 1, 2, "down"),
@@ -58,16 +66,25 @@ medium_words = [
     ("LOOP", 6, 8, "down"),
 ]
 
+hard_words = [
+    ("COMPILE", 1, 4, "down"),
+    ("ENCRYPTION", 7, 4, "across"),
+    ("ALGORITHM", 2, 11, "down"),
+    ("RECURSION", 7, 7, "down"),
+    ("DEBUGGING", 15, 0, "across"),
+]
+
 grid_sets = {
     "easy": build_grid(easy_words),
     "medium": build_grid(medium_words),
+    "hard": build_grid(hard_words),
 }
+
 
 #Game State
 
 guessed_words = []
 current_difficulty = "easy"
-
 
 #Route
 
@@ -85,7 +102,8 @@ def home():
                 guessed_words.append(word)
 
     full_grid = grid_sets[current_difficulty]
-    # Start with placeholders so grid shape appears
+
+    # Start with placeholders so crossword shape appears
     visible_grid = [[("?" if cell else None) for cell in row] for row in full_grid]
 
     # Reveal guessed words
@@ -114,4 +132,5 @@ def home():
 
 if __name__ == "__main__":
     app.run(debug=True, use_reloader=False)
+
 
