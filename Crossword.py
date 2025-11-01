@@ -1,8 +1,9 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-# Difficulty levels and clues
+#Clues
+
 easy_clues = {
     'PYTHON': 'A popular programming language known for its readability.',
     'JAVA': 'A programming language that is class-based and object-oriented.',
@@ -11,62 +12,75 @@ easy_clues = {
     'KOTLIN': 'A modern programming language that interoperates fully with Java.'
 }
 
-medium_clues = {
-    'VARIABLE': 'A named storage location in a program that holds a value that can change.',
-    'FUNCTION': 'A reusable block of code that performs a specific task when called.',
-    'SYNTAX': 'The set of rules that defines how code must be written so the computer understands it.',
-    'BOOLEAN': 'A type of value that can only be true or false.',
-    'LOOP': 'A way to repeat a block of code several times until a condition is met.'
-}
+#Grid Builder - Builds grids using coordinates
 
-hard_clues = {
-    'ALGORITHM': 'A logical set of steps used to solve a problem or complete a task.',
-    'ENCRYPTION': 'A way of scrambling information so only people with the right key can read it.',
-    'COMPILE': 'What happens when your code gets turned into something the computer can actually run.',
-    'RECURSION': 'When a function calls itself to solve a problem.',
-    'DEBUGGING': 'The process of finding and fixing mistakes in your code.'
-}
+def build_grid(words):
+    max_row = max(r + (len(w) if d in ["down", "up"] else 1) for w, r, c, d in words)
+    max_col = max(c + (len(w) if d == "across" else 1) for w, r, c, d in words)
+    grid = [[None for _ in range(max_col)] for _ in range(max_row)]
 
-clue_sets = {"easy": easy_clues, "medium": medium_clues, "hard": hard_clues}
+    for word, row, col, direction in words:
+        for i, ch in enumerate(word):
+            if direction == "across":
+                grid[row][col + i] = ch
+            elif direction == "down":
+                grid[row + i][col] = ch
+            elif direction == "up":
+                grid[row - i][col] = ch
+    return grid
 
-# Crossword grid layout (like your image)
-grid_layout = [
-    [None, None, None, None, 'S', None, None, None],
-    [None, None, None, None, 'W', 'J', 'A', 'V', 'A'],
-    [None, None, None, None, 'I', None, None, None],
-    [None, None, None, None, 'F', 'K', None, None],
-    ['P', 'Y', 'T', 'H', 'O', 'N', None, None],
-    [None, None, None, None, None, 'T', None, None],
-    [None, None, None, None, None, 'L', None, None],
-    [None, None, None, None, None, 'I', None, None],
-    [None, None, None, None, None, 'N', None, None],
-    [None, 'R', 'U', 'B', 'Y', None, None, None],
+easy_words = [
+    ("SWIFT", 1, 2, "down"),      # Starts above “PYTHON”, connects with T
+    ("JAVA", 2, 3, "across"),     # Right of W in SWIFT
+    ("PYTHON", 5, 0, "across"),   # Base horizontal word
+    ("KOTLIN", 4, 4, "down"),     # Connects to O in PYTHON
+    ("RUBY", 6, 1, "down"),       # Starts directly below the 'Y' in PYTHON
 ]
+easy_grid = build_grid(easy_words)
+
+#Game State
 
 guessed_words = []
-current_difficulty = "easy"
+
+#Route
 
 @app.route("/", methods=["GET", "POST"])
 def home():
-    global guessed_words, current_difficulty
+    global guessed_words
+
     if request.method == "POST":
-        if "difficulty" in request.form:
-            current_difficulty = request.form["difficulty"]
-            guessed_words = []
-        elif "word" in request.form:
+        if "word" in request.form:
             word = request.form["word"].upper()
-            if word in clue_sets[current_difficulty]:
-                if word not in guessed_words:
-                    guessed_words.append(word)
-        elif "reset" in request.form:
-            guessed_words = []
+            if word in easy_clues and word not in guessed_words:
+                guessed_words.append(word)
+
+    full_grid = easy_grid
+
+    #Create blank grid to fill
+    visible_grid = [[("" if cell else None) for cell in row] for row in full_grid]
+
+    #Reveal guessed words
+    for word in guessed_words:
+        for r, row in enumerate(full_grid):
+            row_str = "".join(c if c else "." for c in row)
+            if word in row_str:
+                start = row_str.index(word)
+                for i in range(len(word)):
+                    visible_grid[r][start + i] = full_grid[r][start + i]
+        for c in range(len(full_grid[0])):
+            col_str = "".join(full_grid[r][c] if full_grid[r][c] else "." for r in range(len(full_grid)))
+            if word in col_str:
+                start = col_str.index(word)
+                for i in range(len(word)):
+                    visible_grid[start + i][c] = full_grid[start + i][c]
+
     return render_template(
         "index.html",
-        grid_layout=grid_layout,
-        difficulty=current_difficulty,
-        clues=clue_sets[current_difficulty],
+        grid_layout=visible_grid,
+        clues=easy_clues,
         guessed_words=guessed_words
     )
+
 
 if __name__ == "__main__":
     app.run(debug=True)
