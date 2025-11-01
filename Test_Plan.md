@@ -6,7 +6,7 @@
 | **Reset Puzzle** | User should be able to reset the puzzle. | See Figure 4 | ✅ Pass/❌fail |
 | **Usability ** | The grid should be clear, not too hard for the target audience and easy to navigate . | See Figure 5 | ✅ Pass/❌fail |
 | **Compatibility ** | User can type answers into the grid. | See Figure 6 | ✅ Pass/❌fail |
-| **Input answer** | User can type answers into the grid. | See Figure 7 | ✅ Pass/❌fail |
+| **Accessibility ** |Controls and instructions should be simple and easy to learn. | See Figure 7 | ✅ Pass/❌fail |
 | **Input answer** | User can type answers into the grid. | See Figure 8 | ✅ Pass/❌fail |
 | **Input answer** | User can type answers into the grid. | See Figure 9 | ✅ Pass/❌fail |
 | **Input answer** | User can type answers into the grid. | See Figure 10 | ✅ Pass/❌fail |
