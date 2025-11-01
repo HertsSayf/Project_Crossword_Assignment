@@ -12,7 +12,9 @@
       margin: 20px;
     }
 
-    h1 { color: #333; }
+    h1 {
+      color: #333;
+    }
 
     .grid {
       display: inline-block;
@@ -20,26 +22,33 @@
       margin: 20px auto;
     }
 
+    .row {
+      display: flex;
+      justify-content: center;
+    }
+
     .cell {
-      width: 40px;
-      height: 40px;
+      width: 50px;
+      height: 50px;
       border: 2px solid #333;
       text-align: center;
       vertical-align: middle;
-      font-size: 22px;
+      font-size: 24px;
       font-weight: bold;
       background: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      box-sizing: border-box;
     }
 
     .empty {
-      border: 2px solid #ccc;
-      background: #f0f0f0;
+      border: none;
+      background: none;
+      width: 50px;
+      height: 50px;
     }
 
-    .form-container { margin: 20px; }
+    .form-container {
+      margin: 20px;
+    }
 
     input[type="text"] {
       padding: 8px;
@@ -54,6 +63,12 @@
       cursor: pointer;
     }
 
+    select {
+      padding: 6px;
+      font-size: 15px;
+      margin: 10px;
+    }
+
     ul {
       list-style-type: none;
       padding: 0;
@@ -65,21 +80,29 @@
       font-size: 16px;
     }
 
-    b { color: #008000; }
+    b {
+      color: #008000;
+    }
   </style>
 </head>
 <body>
-  <h1>  Crazy Crosswords — Easy Mode</h1>
+  <h1>Crazy Crosswords</h1>
+  <form method="POST">
+    <label><b>Choose difficulty:</b></label>
+    <select name="difficulty" onchange="this.form.submit()">
+      <option value="easy" {% if difficulty == 'easy' %}selected{% endif %}>Easy</option>
+      <option value="medium" {% if difficulty == 'medium' %}selected{% endif %}>Medium</option>
+    </select>
+  </form>
 
-  <!-- Crossword grid -->
   <div class="grid">
     {% for row in grid_layout %}
-      <div style="display:flex; justify-content:center;">
+      <div class="row">
         {% for cell in row %}
-          {% if cell is not none %}
+          {% if cell %}
             <div class="cell">{{ cell }}</div>
           {% else %}
-            <div class="cell empty"></div>
+            <div class="empty"></div>
           {% endif %}
         {% endfor %}
       </div>
@@ -107,4 +130,3 @@
   </ul>
 </body>
 </html>
-
