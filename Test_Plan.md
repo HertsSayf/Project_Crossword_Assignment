@@ -1,6 +1,6 @@
 | **Feature**              | **Expected Result**                                                                 | **Actual Result** | **Pass/Fail** |
 |---------------------------|--------------------------------------------------------------------------------------|-------------------|---------------|
-| **Load crossword grid**   | The full grid loads onto the website.                                               |   <img width="959" height="538" alt="image" src="https://github.com/user-attachments/assets/1f28bb42-a87a-4f13-b024-815cfb62897a" />Pass
+| **Load crossword grid**   | The full grid loads onto the website.                                               |   <img width="959" height="538" alt="image" src="https://github.com/user-attachments/assets/1f28bb42-a87a-4f13-b024-815cfb62897a" /> The whole grid loads corectly onto the website                                                                    pass
                 |               |
 | **Reveal clue**           | Clicking on the number should reveal the correct clue.                              |                   |               |
 | **Input answer**          | The user should be able to input their answer in each cell.                         |                   |               |
