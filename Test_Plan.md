@@ -7,8 +7,10 @@
 | **Usability** | The grid should be clear, not too hard for the target audience and easy to navigate . | grid is clear and easy to understand| ✅ Pass
 | **The grid updates after a word is added** |The grid should update after a word is added(works accross all difficuties). | See Figure 6 | ✅ Pass 
 | **Accessibility** |Controls and instructions should be simple and easy to learn. | No controls and instructions given | ❌fail
-| **Default difficulty** | default difficulty should be easy. | default difficulty is easy| ✅ Pass/
-| **Change difficulty** | when difficulty is changed the grid should update to the desired version. |see figure 8| ✅ Pass
+| **Default difficulty** | default difficulty should be easy. | default difficulty is easy| ✅ Pass
+| **Change difficulty** | when difficulty is changed the grid should update to the desired version. |see figure 9| ✅ Pass
+| **Crossword is colour coded** | Crossword is colour coded to the words . |No colours added to match words with hints| ❌fail
+
 
 **Figure 1: Grid loads successfully**
 <img width="959" height="539" alt="image" src="https://github.com/user-attachments/assets/f3f4c52d-6721-43f4-bf96-6229237096b3" />
@@ -27,7 +29,7 @@
 
 
 
-**Figure 8: different difficulties load successfully**
+**Figure 9: different difficulties load successfully**
 <img width="959" height="538" alt="image" src="https://github.com/user-attachments/assets/f0bc1254-505f-4607-8bbb-76935c8df78c" />
 
 <img width="959" height="539" alt="image" src="https://github.com/user-attachments/assets/b4f7763b-d505-43bf-a88b-c7a951dda168" />
