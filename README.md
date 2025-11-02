@@ -108,5 +108,5 @@ Our software development strategy is the spiral methodology, which contains elem
 
 ## Game State Management 
 Our crossword game follows a simple system to track the players these sates are :
-### Start ### - The game begins by loading up the easiest version of the crosswords along with clues by the side. All words are hidden until guessed corectly.
-### Win ###- Win wil be achieved when the user manages to complete and solve all the words in the grid correctly. We have implemented a timer that goes up so users can time how quickly they complete the ccrossword.
+### Start  - The game begins by loading up the easiest version of the crosswords along with clues by the side. All words are hidden until guessed corectly.
+### Win - Win wil be achieved when the user manages to complete and solve all the words in the grid correctly. We have implemented a timer that goes up so users can time how quickly they complete the ccrossword.
