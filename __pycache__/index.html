@@ -83,6 +83,17 @@
 		b {
 		  color: #008000;
 		}
+		.number {
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  font-size: 12px;
+  color: #333;
+}
+.cell {
+  position: relative;
+}
+
 	  </style>
 	</head>
 	<body>
@@ -104,18 +115,25 @@
 	  </form>
 
 	  <div class="grid">
-		{% for row in grid_layout %}
-		  <div class="row">
-			{% for cell in row %}
-			  {% if cell %}
-				<div class="cell">{{ cell }}</div>
-			  {% else %}
-				<div class="empty"></div>
-			  {% endif %}
-			{% endfor %}
-		  </div>
-		{% endfor %}
-	  </div>
+  {% for row in grid_layout %}
+    <div class="row">
+      {% for cell in row %}
+        {% if cell.letter %}
+          <div class="cell {% if cell.letter != '?' %}guessed{% endif %}" onclick="showClue({{ cell.number or 0 }})">
+            {% if cell.number %}
+              <span class="number">{{ cell.number }}</span>
+            {% endif %}
+            {{ cell.letter }}
+          </div>
+        {% else %}
+          <div class="empty"></div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endfor %}
+</div>
+<div id="clue-box" style="margin-top: 20px; font-size: 18px; font-weight: bold;"></div>
+
 
 	  <div class="form-container">
 	  {% if message %}
@@ -174,6 +192,15 @@
 		updateTimerDisplay();
 	  }
 	</script>
+	<script>
+ <script>
+  const clues = {
+    {% for word, clue in clues.items() %}
+      {{ loop.index }}: "{{ clue }}",
+    {% endfor %}
+  };
+</script>
+</script>
 	</body>
 	</html>
 
