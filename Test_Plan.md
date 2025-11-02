@@ -20,10 +20,8 @@
 
 
 **Figure 6: grid updates when a word is added in every difficulty mode**
-<img width="379" height="380" alt="image" src="https://github.com/user-attachments/assets/0d1ad06e-40a0-4982-a03c-26547a4f0c56" />
-
+<img width="422" height="389" alt="image" src="https://github.com/user-attachments/assets/7466e742-5cb1-414e-9393-200f60bcaea5" />
 <img width="477" height="378" alt="image" src="https://github.com/user-attachments/assets/488231e6-1f9c-4346-9fd6-a4f54ef7d477" />
-
 <img width="446" height="441" alt="image" src="https://github.com/user-attachments/assets/2b77cced-762b-402a-94fb-ee86516da6ad" />
 
 
