@@ -100,7 +100,7 @@ current_difficulty = "easy"
 @app.route("/", methods=["GET", "POST"])
 def home():
     global guessed_words, current_difficulty
-
+    message = ""
     if request.method == "POST":
         if "difficulty" in request.form:
             current_difficulty = request.form["difficulty"]
@@ -109,6 +109,9 @@ def home():
             word = request.form["word"].upper()
             if word in clue_sets[current_difficulty] and word not in guessed_words:
                 guessed_words.append(word)
+                message = f"✅ Correct! {word} was found."
+            else:
+                 message = f"❌ Incorrect! {word} is not in this crossword."
 
     full_grid = grid_sets[current_difficulty]
 
@@ -135,7 +138,8 @@ def home():
         grid_layout=visible_grid,
         difficulty=current_difficulty,
         clues=clue_sets[current_difficulty],
-        guessed_words=guessed_words
+        guessed_words=guessed_words,
+        message=message 
     )
 
 
