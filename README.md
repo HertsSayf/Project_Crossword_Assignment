@@ -105,3 +105,5 @@ Our software development strategy is the spiral methodology, which contains elem
 ## Flowchart 
 <img width="464" height="202" alt="image" src="https://github.com/user-attachments/assets/3d128cad-94f4-4cc9-8c1d-483eb2894bac" />
 
+
+## Game State Management 
