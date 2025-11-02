@@ -13,24 +13,24 @@
 |**Handle Correct answer** | System should dispay an correct message and include the word in the crossword. | correct message appears with the word inputted,see figure 11|  ✅ Pass|
 
 
-**Figure 1: Grid loads successfully**
+## Figure 1: Grid loads successfully
 <img width="959" height="539" alt="image" src="https://github.com/user-attachments/assets/f3f4c52d-6721-43f4-bf96-6229237096b3" />
 
 
-**Figure 2: Typing answers into the grid and it shows**
+## Figure 2: Typing answers into the grid and it shows**
 <img width="958" height="539" alt="image" src="https://github.com/user-attachments/assets/1424f0d6-f315-4d67-b961-a83ebeda62b8" />
 
-**Figure 3: incorrect message**
+## Figure 3: incorrect message**
 <img width="344" height="380" alt="image" src="https://github.com/user-attachments/assets/30a7f15b-4629-470a-8c77-4e2284fb811a" />
 
-**Figure 4 : timer**
+## Figure 4 : timer
 <img width="956" height="538" alt="image" src="https://github.com/user-attachments/assets/b9526907-908f-40c4-8efe-6b7fbafc2bba" />
 <img width="959" height="536" alt="image" src="https://github.com/user-attachments/assets/0cdb2946-6527-40ce-b0a5-8435cb4df899" />
 
 
 
 
-**Figure 6: grid updates when a word is added in every difficulty mode**
+## Figure 6: grid updates when a word is added in every difficulty mode
 <img width="422" height="389" alt="image" src="https://github.com/user-attachments/assets/7466e742-5cb1-414e-9393-200f60bcaea5" />
 <img width="477" height="378" alt="image" src="https://github.com/user-attachments/assets/488231e6-1f9c-4346-9fd6-a4f54ef7d477" />
 <img width="446" height="441" alt="image" src="https://github.com/user-attachments/assets/2b77cced-762b-402a-94fb-ee86516da6ad" />
@@ -38,13 +38,13 @@
 
 
 
-**Figure 9: different difficulties load successfully**
+## Figure 9: different difficulties load successfully
 <img width="959" height="538" alt="image" src="https://github.com/user-attachments/assets/f0bc1254-505f-4607-8bbb-76935c8df78c" />
 
 <img width="959" height="539" alt="image" src="https://github.com/user-attachments/assets/b4f7763b-d505-43bf-a88b-c7a951dda168" />
 
 <img width="959" height="539" alt="image" src="https://github.com/user-attachments/assets/f015d6ca-dbec-426d-a539-24dd968f5db7" />
 
-**Figure 11: correct message**
+## Figure 11: correct message
 <img width="428" height="410" alt="image" src="https://github.com/user-attachments/assets/3ccf9ce4-1eec-475e-83eb-56c6a2b110a2" />
 
