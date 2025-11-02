@@ -65,7 +65,7 @@ Once we get the game up and running, we plan to add 2 extra difficulties:
  - Microsoft Visual Studio Code
   
 
-## Mock-ups ##:
+## Mock-ups :
 -	<img width="936" height="742" alt="image" src="https://github.com/user-attachments/assets/f5393e46-f750-4a3c-ae62-8876424ce237" />
 ## Easy Mode Grid Format Mock-up:
 - <img width="902" height="775" alt="image" src="https://github.com/user-attachments/assets/6d3e86ad-d663-4927-8a36-ddd9a281d497" />
@@ -102,6 +102,6 @@ Our software development strategy is the spiral methodology, which contains elem
 
 - Overall test plan Submitted in the format of a table in a seperate file
 
-## Flowchart ##
+## Flowchart 
 <img width="464" height="202" alt="image" src="https://github.com/user-attachments/assets/3d128cad-94f4-4cc9-8c1d-483eb2894bac" />
 
