@@ -1,4 +1,4 @@
-# Project_Crossword_Assignment
+# Project Crossword Assignment
 This is the repo for our crossword project it is made from a team of four. Rayyan, Fayaaz, Sayfullah, Kalid
 ## Project overview
 Our group has chosen to create a web-based crossword game designed for children aged 10-14 (although we're planning to make a seperate version for adults). The aim is to make an educational and fun tool that helps the users improve their vocabulary, spelling and problem solving skills through the interactive gameplay.
