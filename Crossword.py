@@ -1,8 +1,10 @@
-from flask import Flask, render_template, request
+the flask web framework
 
-app = Flask(__name__)
+app = Flask(__name__)                               #Creates the flask application instance 
 
 #Clues
+#These clues give a description on each word of their respective crossword
+#They are important as needed to validate guesses and display the clue list
 
 easy_clues = {
     'PYTHON': 'A popular programming language known for its readability.',
@@ -28,24 +30,30 @@ hard_clues = {
     'DEBUGGING': 'The process of finding and fixing errors in code.'
 }
 
-clue_sets = {"easy": easy_clues, "medium": medium_clues, "hard": hard_clues}
+clue_sets = {"easy": easy_clues, "medium": medium_clues, "hard": hard_clues} #stores the clue sets under-
+#difficulties for easy access, stored within variable clue_sets
 
 
 #Grid Builder - Builds grids using coordinates
+#Creates a List of rows and columns filled with none (built in python null value), then adds the letters/words
+#Each word has a responsible coord these help to find the words info which is necesary and listed below
+#(WORD, start_row, start_col, direction) - direction can be either across or down
 
 def build_grid(words):
-    """Creates crossword grid."""
-    max_row = max(r + (len(w) if d.lower() == "down" else 1) for w, r, c, d in words)
-    max_col = max(c + (len(w) if d.lower() == "across" else 1) for w, r, c, d in words)
-    grid = [[None for _ in range(max_col)] for _ in range(max_row)]
+    """Creates crossword grid from the provided positions."""
+    max_row = max(r + (len(w) if d.lower() == "down" else 1) for w, r, c, d in words)  #Compute the number of rows needed: for 'down' words add length to row, else +1 row
+    max_col = max(c + (len(w) if d.lower() == "across" else 1) for w, r, c, d in words)  #Compute the number of columns needed: for 'across' words add length to col, else +1 col
+    grid = [[None for _ in range(max_col)] for _ in range(max_row)]  #Initializes an empty grid using none
 
+#Places each letter of each word into the grid at the correct coords
+    
     for word, row, col, direction in words:
-        for i, ch in enumerate(word):
-            if direction.lower() == "across":
+        for i, ch in enumerate(word):           #loop over letters of the word usimg enumerate, ch - the letter at index position
+            if direction.lower() == "across":   #If across advance column by the index number
                 grid[row][col + i] = ch
-            elif direction.lower() == "down":
+            elif direction.lower() == "down":   #If down, advance row by i
                 grid[row + i][col] = ch
-    return grid
+    return grid                                 #Returns the filled grid, including None where there are no letters)
 
 
 ##Grid Contents
@@ -132,5 +140,6 @@ def home():
 
 if __name__ == "__main__":
     app.run(debug=True, use_reloader=False)
+
 
 
