@@ -2,15 +2,15 @@
 |--------------|--------------------|-------------------|---------------|
 | **Load crossword grid** | The full grid loads onto the website. | See Figure 1 | ✅ Pass |
 | **Input answer** | User can type answers into the grid. | See Figure 2 | ✅ Pass |
-| **Handle incorrcet answer** | System should dispay an error message and not include the word in the crossword. | system displays error message and does not include the word in the crossowrd |see figure 3|  ✅ Pass |
-| **Timer**| System should display a timer that can be stopped and reset. | timer added ontop of the crossowrd and can start stop and be reset | ✅ Pass |
+| **Handle incorrcet answer** | System should dispay an error message and not include the word in the crossword. | system displays error message and does not include the word in the crossowrd,see figure 3| ✅ Pass |
+| **Timer**| System should display a timer that can be stopped and reset. | timer added ontop of the crossowrd and can start stop and be reset, see figure 4 | ✅ Pass |
 | **Usability** | The grid should be clear, not too hard for the target audience and easy to navigate . | grid is clear and easy to understand| ✅ Pass
 | **The grid updates after a word is added** |The grid should update after a word is added(works accross all difficuties). | See Figure 6 | ✅ Pass 
 | **Accessibility** |Controls and instructions should be simple and easy to learn. | No controls and instructions given | ❌fail
 | **Default difficulty** | default difficulty should be easy. | default difficulty is easy| ✅ Pass
 | **Change difficulty** | when difficulty is changed the grid should update to the desired version. |see figure 9| ✅ Pass
 | **Crossword is colour coded** | Crossword is colour coded to the words . |No colours added to match words with hints| ❌fail
-|**Handle Correct answer** | System should dispay an correct message and include the word in the crossword. | correct message appears with the word inputted |see figure 11|  ✅ Pass|
+|**Handle Correct answer** | System should dispay an correct message and include the word in the crossword. | correct message appears with the word inputted,see figure 11|  ✅ Pass|
 
 
 **Figure 1: Grid loads successfully**
@@ -22,6 +22,12 @@
 
 **Figure 3: incorrect message**
 <img width="344" height="380" alt="image" src="https://github.com/user-attachments/assets/30a7f15b-4629-470a-8c77-4e2284fb811a" />
+
+**Figure 4 : timer**
+<img width="956" height="538" alt="image" src="https://github.com/user-attachments/assets/b9526907-908f-40c4-8efe-6b7fbafc2bba" />
+<img width="959" height="536" alt="image" src="https://github.com/user-attachments/assets/0cdb2946-6527-40ce-b0a5-8435cb4df899" />
+
+
 
 
 **Figure 6: grid updates when a word is added in every difficulty mode**
