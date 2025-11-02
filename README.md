@@ -34,9 +34,9 @@ Once we get the game up and running, we plan to add 2 extra difficulties:
   - The crossword will be in a grid layout where players can see the length of the word by counting the number of cells
   - Players can enter their answer into an input bar below the grid
   - when a player inputs an answer, either a completion message  if correct or an error message if incorrect will appear 
-  - Once all words are guessed correctly, a final completion messsage will pop up to confirm the puzzle is complete
+  - Once all words are guessed correctly, a final completion message will pop up to confirm the puzzle is complete
   - Users will have the option to restart the game at any time by pressing the reset button
-  - a difficulty section including easy, medium and hard which would vary the grid sizes and complexity of the words
+  - a difficulty selection including easy, medium and hard which would vary the grid sizes and complexity of the words
 
 ## Nonfunctional 
   - The interface will be simple, clear and easy to navigate so users can quickly understand how to play
