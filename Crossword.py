@@ -56,7 +56,7 @@ def build_grid(words):
 
 
 
-# Grid Contents
+# This shows what words are going to be in each different grid
 easy_words = [
     (1, "SWIFT", 1, 2, "down"),
     (2, "JAVA", 2, 3, "across"),
@@ -81,7 +81,7 @@ hard_words = [
     (5, "DEBUGGING", 15, 0, "across"),
 ]
 
-grid_sets = {
+grid_sets = { # this links each difficulty to its own crossword grid 
     "easy": build_grid(easy_words),
     "medium": build_grid(medium_words),
     "hard": build_grid(hard_words),
@@ -99,7 +99,7 @@ current_difficulty = "easy"
 def home():
     global guessed_words, current_difficulty
 
-    message = None
+    message = None 
 
     if request.method == "POST":
         # Handle difficulty change
@@ -118,14 +118,14 @@ def home():
             else:
                 message = f"❌ Incorrect! '{word}' is not in this crossword."
 
-        # Handle reset
+        # when the user resets the board 
         elif "reset" in request.form:
             guessed_words = []
             message = None
 
     full_grid = grid_sets[current_difficulty]
 
-    # Create visible grid
+    # this shows the words when guessed and filles the rest with question marks 
     visible_grid = []
     for row in full_grid:
         visible_row = []
@@ -138,7 +138,7 @@ def home():
                 visible_row.append({"letter": "?" if letter else None, "number": number})
         visible_grid.append(visible_row)
 
-    return render_template(
+    return render_template( # links data to the webpage 
         "index.html",
         grid_layout=visible_grid,
         difficulty=current_difficulty,
@@ -150,6 +150,7 @@ def home():
 
 if __name__ == "__main__":
     app.run(debug=True, use_reloader=False)
+
 
 
 
