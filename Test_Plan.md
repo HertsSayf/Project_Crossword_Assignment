@@ -17,9 +17,12 @@
 **Figure 2:** Typing answers into the grid and it shows
 <img width="958" height="539" alt="image" src="https://github.com/user-attachments/assets/1424f0d6-f315-4d67-b961-a83ebeda62b8" />
 
+
 **Figure 6:** grid updates when a word is added in every difficulty mode
 <img width="379" height="380" alt="image" src="https://github.com/user-attachments/assets/0d1ad06e-40a0-4982-a03c-26547a4f0c56" />
+
 <img width="477" height="378" alt="image" src="https://github.com/user-attachments/assets/488231e6-1f9c-4346-9fd6-a4f54ef7d477" />
+
 <img width="446" height="441" alt="image" src="https://github.com/user-attachments/assets/2b77cced-762b-402a-94fb-ee86516da6ad" />
 
 
