@@ -101,7 +101,7 @@
 	  <div id="timer-container" style="margin: 15px;">
 	  <span style="font-size: 20px; font-weight: bold;">⏱️ Time: </span>
 	  <span id="timer" style="font-size: 20px;">0:00</span><br><br>
-	  <button type="button" onclick="startTimer()">Start</button>
+	  <button type="button" onclick="startTimer()">Start</button> 
 	  <button type="button" onclick="stopTimer()">Stop</button>
 	  <button type="button" onclick="resetTimer()">Reset</button>
 	</div>
@@ -137,7 +137,7 @@
 
 	  <div class="form-container">
 	  {% if message %}
-		 <p style="font-size:18px; font-weight:bold; color:{% if '✅' in message %}green{% else %}red{% endif %};">
+		 <p style="font-size:18px; font-weight:bold; color:{% if '✅' in message %}green{% else %}red{% endif %};"> <!-- outputs a message after the user guesses (green for correct, red for wrong) -->
 		  {{ message }}
 	  </p>
 	  {% endif %}
