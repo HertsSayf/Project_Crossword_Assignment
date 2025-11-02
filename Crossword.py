@@ -3,9 +3,8 @@ from flask import Flask, render_template, request  # Flask web framework
 
 app = Flask(__name__)  # Create the Flask application instance
 
-# ===============================
+
 # Clues
-# ===============================
 easy_clues = {
     'PYTHON': 'A popular programming language known for its readability.',
     'JAVA': 'A programming language that is class-based and object-oriented.',
@@ -33,9 +32,9 @@ hard_clues = {
 clue_sets = {"easy": easy_clues, "medium": medium_clues, "hard": hard_clues}
 
 
-# ===============================
+
 # Grid Builder
-# ===============================
+
 def build_grid(words):
     """Creates crossword grid from the provided positions and adds clue numbers."""
     max_row = max(r + (len(w) if d.lower() == "down" else 1) for _, w, r, c, d in words)
@@ -56,9 +55,8 @@ def build_grid(words):
     return grid
 
 
-# ===============================
+
 # Grid Contents
-# ===============================
 easy_words = [
     (1, "SWIFT", 1, 2, "down"),
     (2, "JAVA", 2, 3, "across"),
@@ -89,9 +87,9 @@ grid_sets = {
     "hard": build_grid(hard_words),
 }
 
-# ===============================
+
 # Game State
-# ===============================
+
 guessed_words = []
 current_difficulty = "easy"
 
@@ -157,3 +155,4 @@ def home():
 # ===============================
 if __name__ == "__main__":
     app.run(debug=True, use_reloader=False)
+
