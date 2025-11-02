@@ -8,7 +8,7 @@
 | **The grid updates after a word is added** |The grid should update after a word is added. | See Figure 6 | ✅ Pass 
 | **Accessibility** |Controls and instructions should be simple and easy to learn. | No controls and instructions given | ❌fail
 | **Default difficulty** | default difficulty should be easy. | default difficulty is easy| ✅ Pass/
-| **Change difficulty** | when difficulty is changed the grid should update to the desired version. | | ✅ Pass
+| **Change difficulty** | when difficulty is changed the grid should update to the desired version. |see figure 8| ✅ Pass
 
 **Figure 1:** Grid loads successfully
 <img width="959" height="539" alt="image" src="https://github.com/user-attachments/assets/f3f4c52d-6721-43f4-bf96-6229237096b3" />
@@ -17,4 +17,9 @@
 **Figure 2:** Typing answers into the grid and it shows
 <img width="958" height="539" alt="image" src="https://github.com/user-attachments/assets/1424f0d6-f315-4d67-b961-a83ebeda62b8" />
 
+**Figure 8:** different difficulties load successfully
+<img width="959" height="538" alt="image" src="https://github.com/user-attachments/assets/f0bc1254-505f-4607-8bbb-76935c8df78c" />
 
+<img width="959" height="539" alt="image" src="https://github.com/user-attachments/assets/b4f7763b-d505-43bf-a88b-c7a951dda168" />
+
+<img width="959" height="539" alt="image" src="https://github.com/user-attachments/assets/f015d6ca-dbec-426d-a539-24dd968f5db7" />
