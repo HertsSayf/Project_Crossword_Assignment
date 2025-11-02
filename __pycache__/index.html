@@ -161,28 +161,28 @@
 	  </ul>
 	  <script>
 	  let timerInterval;
-	  let totalSeconds = 0;
-	  let isRunning = false;
+	  let totalSeconds = 0; // this keeps track of how many seconds have passed 
+	  let isRunning = false; // this is to check whether the timer is running or not 
 
 	  function updateTimerDisplay() {
 		const minutes = Math.floor(totalSeconds / 60);
-		const seconds = totalSeconds % 60;
+		const seconds = totalSeconds % 60; // this formats the timer so it shows on screen in minutes and seconds
 		document.getElementById("timer").textContent =
 		  `${minutes}:${seconds.toString().padStart(2, "0")}`;
 	  }
 
-	  function startTimer() {
+	  function startTimer() { // this functoin starts counting up every second 
 		if (!isRunning) {
 		  isRunning = true;
-		  timerInterval = setInterval(() => {
+		  timerInterval = setInterval(() => { 
 			totalSeconds++;
 			updateTimerDisplay();
-		  }, 1000);
+		  }, 1000); // 1000 millesecond = 1 second
 		}
 	  }
 
-	  function stopTimer() {
-		clearInterval(timerInterval);
+	  function stopTimer() { 
+		clearInterval(timerInterval); // this stops the timer from counting 
 		isRunning = false;
 	  }
 
