@@ -1,12 +1,11 @@
-print("Loaded Crossword.py")                        #help check if the correct file is loaded
-from flask import Flask, render_template, request   #the flask web framework
+print("Loaded Crossword.py")  # Help check if the correct file is loaded
+from flask import Flask, render_template, request  # Flask web framework
 
-app = Flask(__name__)                               #Creates the flask application instance 
+app = Flask(__name__)  # Create the Flask application instance
 
-#Clues
-#These clues give a description on each word of their respective crossword
-#They are important as needed to validate guesses and display the clue list
-
+# ===============================
+# Clues
+# ===============================
 easy_clues = {
     'PYTHON': 'A popular programming language known for its readability.',
     'JAVA': 'A programming language that is class-based and object-oriented.',
@@ -31,56 +30,57 @@ hard_clues = {
     'DEBUGGING': 'The process of finding and fixing errors in code.'
 }
 
-clue_sets = {"easy": easy_clues, "medium": medium_clues, "hard": hard_clues} #stores the clue sets under-
-#different difficulties for easy access, stored within variable clue_sets
+clue_sets = {"easy": easy_clues, "medium": medium_clues, "hard": hard_clues}
 
 
-#Grid Builder - Builds grids using coordinates
-#Creates a List of rows and columns filled with none (built in python null value), then adds the letters/words
-#Each word has a responsible coord these help to find the words info which is necesary and listed below
-#(WORD, start_row, start_col, direction) - direction can be either across or down
-
+# ===============================
+# Grid Builder
+# ===============================
 def build_grid(words):
-    """Creates crossword grid from the provided positions."""
-    max_row = max(r + (len(w) if d.lower() == "down" else 1) for w, r, c, d in words)  #Compute the number of rows needed: for 'down' words add length to row, else +1 row
-    max_col = max(c + (len(w) if d.lower() == "across" else 1) for w, r, c, d in words)  #Compute the number of columns needed: for 'across' words add length to col, else +1 col
-    grid = [[None for _ in range(max_col)] for _ in range(max_row)]  #Initializes an empty grid using none
+    """Creates crossword grid from the provided positions and adds clue numbers."""
+    max_row = max(r + (len(w) if d.lower() == "down" else 1) for _, w, r, c, d in words)
+    max_col = max(c + (len(w) if d.lower() == "across" else 1) for _, w, r, c, d in words)
+    grid = [[{"letter": None, "number": None} for _ in range(max_col)] for _ in range(max_row)]
 
-#Places each letter of each word into the grid at the correct coords
-    
-    for word, row, col, direction in words:
-        for i, ch in enumerate(word):           #loop over letters of the word usimg enumerate, ch - the letter at index position
-            if direction.lower() == "across":   #If across advance column by the index number
-                grid[row][col + i] = ch
-            elif direction.lower() == "down":   #If down, advance row by i
-                grid[row + i][col] = ch
-    return grid                                 #Returns the filled grid, including None where there are no letters)
+    # Place words and numbers
+    for number, word, row, col, direction in words:
+        for i, ch in enumerate(word):
+            if direction.lower() == "across":
+                grid[row][col + i]["letter"] = ch
+            elif direction.lower() == "down":
+                grid[row + i][col]["letter"] = ch
+
+        # Place the clue number at the word’s start position
+        grid[row][col]["number"] = number
+
+    return grid
 
 
-##Grid Contents
-
+# ===============================
+# Grid Contents
+# ===============================
 easy_words = [
-    ("SWIFT", 1, 2, "down"),
-    ("JAVA", 2, 3, "across"),
-    ("PYTHON", 5, 0, "across"),
-    ("KOTLIN", 4, 4, "down"),
-    ("RUBY", 6, 1, "down"),
+    (1, "SWIFT", 1, 2, "down"),
+    (2, "JAVA", 2, 3, "across"),
+    (3, "PYTHON", 5, 0, "across"),
+    (4, "KOTLIN", 4, 4, "down"),
+    (5, "RUBY", 6, 1, "down"),
 ]
 
 medium_words = [
-    ("VARIABLE", 1, 5, "down"),
-    ("SYNTAX", 2, 2, "down"),
-    ("FUNCTION", 4, 0, "across"),
-    ("BOOLEAN", 6, 5, "across"),
-    ("LOOP", 6, 8, "down"),
+    (1, "VARIABLE", 1, 5, "down"),
+    (2, "SYNTAX", 2, 2, "down"),
+    (3, "FUNCTION", 4, 0, "across"),
+    (4, "BOOLEAN", 6, 5, "across"),
+    (5, "LOOP", 6, 8, "down"),
 ]
 
 hard_words = [
-    ("COMPILE", 1, 4, "down"),
-    ("ENCRYPTION", 7, 4, "across"),
-    ("ALGORITHM", 2, 11, "down"),
-    ("RECURSION", 7, 7, "down"),
-    ("DEBUGGING", 15, 0, "across"),
+    (1, "COMPILE", 1, 4, "down"),
+    (2, "ENCRYPTION", 7, 4, "across"),
+    (3, "ALGORITHM", 2, 11, "down"),
+    (4, "RECURSION", 7, 7, "down"),
+    (5, "DEBUGGING", 15, 0, "across"),
 ]
 
 grid_sets = {
@@ -89,49 +89,58 @@ grid_sets = {
     "hard": build_grid(hard_words),
 }
 
-
-#Game State
-
+# ===============================
+# Game State
+# ===============================
 guessed_words = []
 current_difficulty = "easy"
 
-#Route
 
+# ===============================
+# Routes
+# ===============================
 @app.route("/", methods=["GET", "POST"])
 def home():
     global guessed_words, current_difficulty
-    message = ""
+
+    message = None  # for feedback messages
+
     if request.method == "POST":
+        # Handle difficulty change
         if "difficulty" in request.form:
             current_difficulty = request.form["difficulty"]
             guessed_words = []
+            message = None
+
+        # Handle guessed words
         elif "word" in request.form:
             word = request.form["word"].upper()
-            if word in clue_sets[current_difficulty] and word not in guessed_words:
-                guessed_words.append(word)
-                message = f"✅ Correct! {word} was found."
+            if word in clue_sets[current_difficulty]:
+                if word not in guessed_words:
+                    guessed_words.append(word)
+                message = f"✅ Correct! {word} has been revealed."
             else:
-                 message = f"❌ Incorrect! {word} is not in this crossword."
+                message = f"❌ Incorrect! '{word}' is not in this crossword."
+
+        # Handle reset
+        elif "reset" in request.form:
+            guessed_words = []
+            message = None
 
     full_grid = grid_sets[current_difficulty]
 
-    # Start with placeholders so crossword shape appears
-    visible_grid = [[("?" if cell else None) for cell in row] for row in full_grid]
-
-    # Reveal guessed words
-    for word in guessed_words:
-        for r, row in enumerate(full_grid):
-            row_str = "".join(c if c else "." for c in row)
-            if word in row_str:
-                start = row_str.index(word)
-                for i in range(len(word)):
-                    visible_grid[r][start + i] = full_grid[r][start + i]
-        for c in range(len(full_grid[0])):
-            col_str = "".join(full_grid[r][c] if full_grid[r][c] else "." for r in range(len(full_grid)))
-            if word in col_str:
-                start = col_str.index(word)
-                for i in range(len(word)):
-                    visible_grid[start + i][c] = full_grid[start + i][c]
+    # Create visible grid
+    visible_grid = []
+    for row in full_grid:
+        visible_row = []
+        for cell in row:
+            letter = cell["letter"]
+            number = cell["number"]
+            if letter and any(letter in word for word in guessed_words):
+                visible_row.append({"letter": letter, "number": number})
+            else:
+                visible_row.append({"letter": "?" if letter else None, "number": number})
+        visible_grid.append(visible_row)
 
     return render_template(
         "index.html",
@@ -139,12 +148,12 @@ def home():
         difficulty=current_difficulty,
         clues=clue_sets[current_difficulty],
         guessed_words=guessed_words,
-        message=message 
+        message=message,
     )
 
 
+# ===============================
+# Run the app
+# ===============================
 if __name__ == "__main__":
     app.run(debug=True, use_reloader=False)
-
-
-
