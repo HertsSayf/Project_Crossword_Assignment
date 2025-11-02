@@ -35,17 +35,15 @@ Once we get the game up and running, we plan to add 2 extra difficulties:
   - Players can enter their answer into an input bar below the grid
   - when a player inputs an answer, either a completion message  if correct or an error message if incorrect will appear 
   - Once all words are guessed correctly, a final completion messsage will pop up to confirm the puzzle is complete
-  - Users will have the option to restart the game at any time by ressing the reset button
+  - Users will have the option to restart the game at any time by pressing the reset button
   - a difficulty section including easy, medium and hard which would vary the grid sizes and complexity of the words
-  - the crossword will have numbered and coloured cells that correspond to a list of clues displayed on the side of the grid
-  - The crossword will be functional on web broswers making it compatible on desktop and Laptops
 
 ## Nonfunctional 
   - The interface will be simple, clear and easy to navigate so users can quickly understand how to play
   - Designed to be used by 10-14 year olds however by adding a difficulty system, older more intelligent people can play
   - A simple and school appropriate design will keep the game engaging without being distracting
   - the system will be reliable and robust
-  - The system should be able to run on different operating systems e.g MacOS, Windows.
+
 
 ## System requirments 
 
