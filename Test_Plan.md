@@ -6,7 +6,7 @@
 | **Timer**| System should display a timer that can be stopped and reset. | timer added ontop of the crossowrd and can start stop and be reset, see figure 4 | ✅ Pass |
 | **Usability** | The grid should be clear, not too hard for the target audience and easy to navigate . | grid is clear and easy to understand| ✅ Pass
 | **The grid updates after a word is added** |The grid should update after a word is added(works accross all difficuties). | See Figure 6 | ✅ Pass 
-| **Accessibility** |Controls and instructions should be simple and easy to learn. | No controls and instructions given | ❌fail
+| **Accessibility** |Controls and instructions should be simple and easy to learn. | No controls and instructions given however game mechanics are simple and dont require much skill to figure out | ❌fail
 | **Default difficulty** | default difficulty should be easy. | default difficulty is easy| ✅ Pass
 | **Change difficulty** | when difficulty is changed the grid should update to the desired version. |see figure 9| ✅ Pass
 | **Crossword is colour coded** | Crossword is colour coded to the words . |No colours added to match words with hints| ❌fail
