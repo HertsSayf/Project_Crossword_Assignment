@@ -110,3 +110,5 @@ Our software development strategy is the spiral methodology, which contains elem
 Our crossword game follows a simple system to track the players these sates are :
 ### Start  - The game begins by loading up the easiest version of the crosswords along with clues by the side. All words are hidden until guessed corectly.
 ### Win - Win wil be achieved when the user manages to complete and solve all the words in the grid correctly. We have implemented a timer that goes up so users can time how quickly they complete the ccrossword.
+### lose - Since the crossword does not have a lives system or a time limit to complete the crossword in, it does not have a lose state. However the game does display an incorrect message when the user inputs an incorrect word.
+### Draw - this state does not apply to our crossword however it could be added if we include a multiplayer feature in the future however that would require more time and resources.
