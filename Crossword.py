@@ -32,7 +32,7 @@ hard_clues = {
 }
 
 clue_sets = {"easy": easy_clues, "medium": medium_clues, "hard": hard_clues} #stores the clue sets under-
-#difficulties for easy access, stored within variable clue_sets
+#different difficulties for easy access, stored within variable clue_sets
 
 
 #Grid Builder - Builds grids using coordinates
@@ -141,5 +141,6 @@ def home():
 
 if __name__ == "__main__":
     app.run(debug=True, use_reloader=False)
+
 
 
