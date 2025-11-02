@@ -1,5 +1,5 @@
 print("Loaded Crossword.py")  # Help check if the correct file is loaded
-from flask import Flask, render_template, request  # Flask web framework
+from flask import Flask, render_template, request  
 
 app = Flask(__name__)  # Create the Flask application instance
 
@@ -99,7 +99,7 @@ current_difficulty = "easy"
 def home():
     global guessed_words, current_difficulty
 
-    message = None  # for feedback messages
+    message = None
 
     if request.method == "POST":
         # Handle difficulty change
@@ -148,10 +148,8 @@ def home():
     )
 
 
-# ===============================
-# Run the app
-# ===============================
 if __name__ == "__main__":
     app.run(debug=True, use_reloader=False)
+
 
 
