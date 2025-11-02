@@ -3,10 +3,10 @@
 	<head>
 	  <meta charset="UTF-8" />
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	  <title>Crazy Crosswords</title>
+	  <title>Crazy Crosswords</title> <!-- Title of page will be shown at the top -->
 	  <style>
 		body {
-		  font-family: Arial, sans-serif;
+		  font-family: Arial, sans-serif;  /*styling the page, font, colour etc*/
 		  background-color: #f4f4f4;
 		  text-align: center;
 		  margin: 20px;
@@ -16,7 +16,7 @@
 		  color: #333;
 		}
 
-		.grid {
+		.grid { /*doin the layout of the grid */
 		  display: inline-block;
 		  border-collapse: collapse;
 		  margin: 20px auto;
@@ -27,7 +27,7 @@
 		  justify-content: center;
 		}
 
-		.cell {
+		.cell { /* making the cells */
 		  width: 50px;
 		  height: 50px;
 		  border: 2px solid #333;
@@ -98,7 +98,7 @@
 	</head>
 	<body>
 	  <h1>Crazy Crosswords</h1>
-	  <div id="timer-container" style="margin: 15px;">
+	  <div id="timer-container" style="margin: 15px;"> <!-- this section is to dot woth the timer. creating buttons to stop start and reset the timer-->
 	  <span style="font-size: 20px; font-weight: bold;">⏱️ Time: </span>
 	  <span id="timer" style="font-size: 20px;">0:00</span><br><br>
 	  <button type="button" onclick="startTimer()">Start</button> 
@@ -106,7 +106,7 @@
 	  <button type="button" onclick="resetTimer()">Reset</button>
 	</div>
 	  <form method="POST">
-		<label><b>Choose difficulty:</b></label>
+		<label><b>Choose difficulty:</b></label> <!-- allows the user to choose what diifculty they want to select  -->
 	<select name="difficulty" onchange="this.form.submit()">
 	  <option value="easy" {% if difficulty == 'easy' %}selected{% endif %}>Easy</option> <!-- selecting the easy option-->
 	  <option value="medium" {% if difficulty == 'medium' %}selected{% endif %}>Medium</option> <!-- selecting the medium option-->
