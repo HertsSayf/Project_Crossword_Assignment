@@ -108,20 +108,20 @@
 	  <form method="POST">
 		<label><b>Choose difficulty:</b></label>
 	<select name="difficulty" onchange="this.form.submit()">
-	  <option value="easy" {% if difficulty == 'easy' %}selected{% endif %}>Easy</option>
-	  <option value="medium" {% if difficulty == 'medium' %}selected{% endif %}>Medium</option>
-	  <option value="hard" {% if difficulty == 'hard' %}selected{% endif %}>Hard</option>
+	  <option value="easy" {% if difficulty == 'easy' %}selected{% endif %}>Easy</option> <!-- selecting the easy option-->
+	  <option value="medium" {% if difficulty == 'medium' %}selected{% endif %}>Medium</option> <!-- selecting the medium option-->
+	  <option value="hard" {% if difficulty == 'hard' %}selected{% endif %}>Hard</option> <!-- selecting the hard option-->
 	</select>
 	  </form>
 
 	  <div class="grid">
-  {% for row in grid_layout %}
+  {% for row in grid_layout %} <!--loops through each row in the crossword-->
     <div class="row">
       {% for cell in row %}
         {% if cell.letter %}
           <div class="cell {% if cell.letter != '?' %}guessed{% endif %}" onclick="showClue({{ cell.number or 0 }})">
             {% if cell.number %}
-              <span class="number">{{ cell.number }}</span>
+              <span class="number">{{ cell.number }}</span>  <!-- this shows a number at the start of the word -->
             {% endif %}
             {{ cell.letter }}
           </div>
