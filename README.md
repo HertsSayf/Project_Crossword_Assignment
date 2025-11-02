@@ -100,7 +100,7 @@ Once we get the game up and running, we plan to add 2 extra difficulties:
 Our software development strategy is the spiral methodology, which contains elements of other methods such as waterfall with its clearly defined phases, combined with an iterative development process. It is great for projects that contain a risk element to it, largely used for complicated, expensive projects. The main advantage of the spiral model is the “coil with many loops”. When the spiral model is visually presented, you can see these loops. This is to show the iterative process that you can go back to prior stages even after moving on and correct any mistakes and improve further. This means we can gradually release stages of the new system and make refinements, too, as time passes.
 
 
-- Overall test plan Submitted in the format of a table in a seperate file
+- **Overall test plan Submitted in the format of a table in a seperate file**
 
 ## Flowchart 
 <img width="464" height="202" alt="image" src="https://github.com/user-attachments/assets/3d128cad-94f4-4cc9-8c1d-483eb2894bac" />
