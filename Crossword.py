@@ -89,14 +89,12 @@ grid_sets = {
 
 
 # Game State
-
 guessed_words = []
 current_difficulty = "easy"
 
 
-# ===============================
 # Routes
-# ===============================
+
 @app.route("/", methods=["GET", "POST"])
 def home():
     global guessed_words, current_difficulty
@@ -155,4 +153,5 @@ def home():
 # ===============================
 if __name__ == "__main__":
     app.run(debug=True, use_reloader=False)
+
 
