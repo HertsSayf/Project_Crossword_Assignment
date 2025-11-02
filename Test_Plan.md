@@ -4,8 +4,8 @@
 | **Input answer** | User can type answers into the grid. | See Figure 2 | ✅ Pass |
 | **Handle incorrcet answer** | System should dispay an error message and not include the word in the crossword. | system displays error message and does not include the word in the crossowrd,see figure 3| ✅ Pass |
 | **Timer**| System should display a timer that can be stopped and reset. | timer added ontop of the crossowrd and can start stop and be reset, see figure 4 | ✅ Pass |
-| **Usability** | The grid should be clear, not too hard for the target audience and easy to navigate . | grid is clear and easy to understand| ✅ Pass
-| **The grid updates after a word is added** |The grid should update after a word is added(works accross all difficuties). | See Figure 6 | ✅ Pass 
+| **Usability** | The grid should be clear, not too hard for the target audience and easy to navigate  | grid is clear and easy to understand| ✅ Pass
+| **The grid updates after a word is added** |The grid should update after a word is added(works accross all difficuties) | See Figure 6 | ✅ Pass 
 | **Accessibility** |Controls and instructions should be simple and easy to learn. | No controls and instructions given however game mechanics are simple and dont require much skill to figure out | ❌fail
 | **Default difficulty** | default difficulty should be easy. | default difficulty is easy| ✅ Pass
 | **Change difficulty** | when difficulty is changed the grid should update to the desired version. |see figure 9| ✅ Pass
@@ -17,10 +17,10 @@
 <img width="959" height="539" alt="image" src="https://github.com/user-attachments/assets/f3f4c52d-6721-43f4-bf96-6229237096b3" />
 
 
-## Figure 2: Typing answers into the grid and it shows**
+## Figure 2: Typing answers into the grid and it shows
 <img width="958" height="539" alt="image" src="https://github.com/user-attachments/assets/1424f0d6-f315-4d67-b961-a83ebeda62b8" />
 
-## Figure 3: incorrect message**
+## Figure 3: incorrect message
 <img width="344" height="380" alt="image" src="https://github.com/user-attachments/assets/30a7f15b-4629-470a-8c77-4e2284fb811a" />
 
 ## Figure 4 : timer
