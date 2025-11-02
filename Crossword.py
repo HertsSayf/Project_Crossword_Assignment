@@ -29,7 +29,7 @@ hard_clues = {
     'DEBUGGING': 'The process of finding and fixing errors in code.'
 }
 
-clue_sets = {"easy": easy_clues, "medium": medium_clues, "hard": hard_clues}
+clue_sets = {"easy": easy_clues, "medium": medium_clues, "hard": hard_clues} # stores all difficuties 
 
 
 
@@ -39,7 +39,7 @@ def build_grid(words):
     """Creates crossword grid from the provided positions and adds clue numbers."""
     max_row = max(r + (len(w) if d.lower() == "down" else 1) for _, w, r, c, d in words)
     max_col = max(c + (len(w) if d.lower() == "across" else 1) for _, w, r, c, d in words)
-    grid = [[{"letter": None, "number": None} for _ in range(max_col)] for _ in range(max_row)]
+    grid = [[{"letter": None, "number": None} for _ in range(max_col)] for _ in range(max_row)] # creating a blank grid 
 
     # Place words and numbers
     for number, word, row, col, direction in words:
@@ -49,7 +49,7 @@ def build_grid(words):
             elif direction.lower() == "down":
                 grid[row + i][col]["letter"] = ch
 
-        # Place the clue number at the word’s start position
+        # this puts the clue number at the start of the word
         grid[row][col]["number"] = number
 
     return grid
@@ -150,6 +150,7 @@ def home():
 
 if __name__ == "__main__":
     app.run(debug=True, use_reloader=False)
+
 
 
 
