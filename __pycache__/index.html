@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crazy Crosswords</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+      margin: 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .grid {
+      display: inline-block;
+      border-collapse: collapse;
+      margin: 20px auto;
+    }
+
+    .row {
+      display: flex;
+      justify-content: center;
+    }
+
+    .cell {
+      width: 50px;
+      height: 50px;
+      border: 2px solid #333;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 24px;
+      font-weight: bold;
+      background: white;
+      box-sizing: border-box;
+    }
+
+    .empty {
+      border: none;
+      background: none;
+      width: 50px;
+      height: 50px;
+    }
+
+    .form-container {
+      margin: 20px;
+    }
+
+    input[type="text"] {
+      padding: 8px;
+      width: 180px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 8px 14px;
+      font-size: 16px;
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    select {
+      padding: 6px;
+      font-size: 15px;
+      margin: 10px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      text-align: left;
+      margin-left: 30%;
+      font-size: 16px;
+    }
+
+    b {
+      color: #008000;
+    }
+  </style>
+</head>
+<body>
+  <h1>Crazy Crosswords</h1>
+  <form method="POST">
+    <label><b>Choose difficulty:</b></label>
+<select name="difficulty" onchange="this.form.submit()">
+  <option value="easy" {% if difficulty == 'easy' %}selected{% endif %}>Easy</option>
+  <option value="medium" {% if difficulty == 'medium' %}selected{% endif %}>Medium</option>
+  <option value="hard" {% if difficulty == 'hard' %}selected{% endif %}>Hard</option>
+</select>
+  </form>
+
+  <div class="grid">
+    {% for row in grid_layout %}
+      <div class="row">
+        {% for cell in row %}
+          {% if cell %}
+            <div class="cell">{{ cell }}</div>
+          {% else %}
+            <div class="empty"></div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="form-container">
+    <form method="POST">
+      <input type="text" name="word" placeholder="Enter word..." required />
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <h2>Clues</h2>
+  <ul>
+    {% for word, clue in clues.items() %}
+      <li>
+        {% if word in guessed_words %}
+          <b>{{ word }}</b> — {{ clue }}
+        {% else %}
+          <b>{{ word[0] }}{{ "*" * (word|length - 1) }}</b> — {{ clue }}
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
+
