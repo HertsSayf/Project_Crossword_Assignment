@@ -115,24 +115,24 @@ Our crossword game follows a simple system to track the players these sates are 
 
 ## Contribution to Project
 ### Rayyan:
-Basic Storyboard
-User and System Requirements
-User Profiles
-HTML Code
-Game state management
+- Basic Storyboard
+- User and System Requirements
+- User Profiles
+- HTML Code
+- Game state management
 
 ### Sayfullah:
-Main parts of the game
-HTML Code
-Created Git Hub repository
+- Main parts of the game
+- HTML Code
+- Created Git Hub repository
 
 ### Fayaaz:
-Identifying and ranking potential risks to projects success
-Software development strategy
-Original basic version of game on main py file
-Clues for the game
-Presentaion for the crossword game
+- Identifying and ranking potential risks to projects success
+- Software development strategy
+- Original basic version of game on main py file
+- Clues for the game
+- Presentaion for the crossword game
 
 ### Kalid:
-Flowchart
+- Flowchart
 
