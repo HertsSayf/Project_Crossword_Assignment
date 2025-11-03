@@ -147,3 +147,7 @@ Our crossword game follows a simple system to track the players these sates are 
 - Flowchart
 - Some code for main py file
 
+## Problems fixed with code 
+<img width="2044" height="1093" alt="Screenshot 2025-11-03 012625" src="https://github.com/user-attachments/assets/914d926a-3177-46c1-941d-197121c0e88f" />
+### The code had 22 probolems and now is fixed
+<img width="2557" height="1388" alt="Screenshot 2025-11-03 012851" src="https://github.com/user-attachments/assets/3e8becdf-776f-482c-ad21-c041fe1b8557" />
