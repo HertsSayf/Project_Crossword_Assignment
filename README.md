@@ -138,7 +138,8 @@ Our crossword game follows a simple system to track the players these sates are 
 - Wrote non functional requirments
 - Wrote software requirments
 - Wrote Hardware requirments
-- Wrote the overall project specification 
+- Wrote the overall project specification
+- chnaged the title to be in blue and bubble writing font on the website
 
 ### Sayfullah:
 - Created Git Hub repository
