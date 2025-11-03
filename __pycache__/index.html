@@ -83,6 +83,12 @@
 		b {
 		  color: #008000;
 		}
+		.correct {
+		  color: #008000;
+		}
+		.wrong {
+		  color: #ff0000;
+		}
 		.number {
   position: absolute;
   top: 2px;
@@ -119,7 +125,7 @@
     <div class="row">
       {% for cell in row %}
         {% if cell.letter %}
-          <div class="cell {% if cell.letter != '?' %}guessed{% endif %}" onclick="showClue({{ cell.number or 0 }})">
+		  <div class="cell {% if cell.letter != '?' %}guessed{% endif %}" onclick="showClue('{{ cell.number or 0 }}')">
             {% if cell.number %}
               <span class="number">{{ cell.number }}</span>  <!-- this shows a number at the start of the word -->
             {% endif %}
@@ -130,14 +136,14 @@
         {% endif %}
       {% endfor %}
     </div>
-  {% endfor %}
-</div>
-<div id="clue-box" style="margin-top: 20px; font-size: 18px; font-weight: bold;"></div>
-
-
+	  {% if message %}
+		 <p class="{{ 'correct' if '✅' in message else 'wrong' }}" style="font-size:18px; font-weight:bold;"> <!-- outputs a message after the user guesses (green for correct, red for wrong) -->
+		  {{ message }}
+	  </p>
+	  {% endif %}
 	  <div class="form-container">
 	  {% if message %}
-		 <p style="font-size:18px; font-weight:bold; color:{% if '✅' in message %}green{% else %}red{% endif %};"> <!-- outputs a message after the user guesses (green for correct, red for wrong) -->
+		 <p class="{{ 'correct' if '✅' in message else 'wrong' }}" style="font-size:18px; font-weight:bold;"> <!-- outputs a message after the user guesses (green for correct, red for wrong) -->
 		  {{ message }}
 	  </p>
 	  {% endif %}
@@ -192,14 +198,17 @@
 		updateTimerDisplay();
 	  }
 	</script>
-	<script>
- <script>
-  const clues = {
-    {% for word, clue in clues.items() %}
-      {{ loop.index }}: "{{ clue }}",
-    {% endfor %}
-  };
-</script>
+<script>
+  const cluesData = '{{ clues | tojson | safe }}';
+
+  function showClue(num) {
+	const clueBox = document.getElementById('clue-box');
+	if (cluesData && cluesData[num]) {
+	  clueBox.textContent = cluesData[num];
+	} else {
+	  clueBox.textContent = '';
+	}
+  }
 </script>
 	</body>
 	</html>
