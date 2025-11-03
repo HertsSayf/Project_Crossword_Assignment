@@ -125,6 +125,8 @@ Our crossword game follows a simple system to track the players these sates are 
 - Main parts of the game
 - HTML Code
 - Created Git Hub repository
+- Compilation of the files and game
+- Tested out to see core functionality of the game
 
 ### Fayaaz:
 - Identifying and ranking potential risks to projects success
