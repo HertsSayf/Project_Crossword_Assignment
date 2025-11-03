@@ -11,7 +11,7 @@
 | **Change difficulty** | when difficulty is changed the grid should update to the desired version. |see figure 9| ✅ Pass
 | **Crossword is colour coded** | Crossword is colour coded to the words . |No colours added to match words with hints| ❌fail
 |**Handle Correct answer** | System should dispay an correct message and include the word in the crossword. | correct message appears with the word inputted,see figure 11|  ✅ Pass|
-| **Number on clues correlates to number on the gird** | the number next to the clues correlate to the numbers on the grid . numbers correspond|  see figure 12| ✅ Pass
+| **Number on clues correlates to number on the gird** | the number next to the clues should correlate to the numbers on the grid | numbers correspond see figure 12| ✅ Pass
 
 ## Figure 1: Grid loads successfully
 <img width="959" height="539" alt="image" src="https://github.com/user-attachments/assets/f3f4c52d-6721-43f4-bf96-6229237096b3" />
