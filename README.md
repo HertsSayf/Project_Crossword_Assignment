@@ -159,7 +159,8 @@ Our crossword game follows a simple system to track the players these sates are 
 - Created Crossword grids on excel to find coords
 - Easy clues crossword grid mock-ups
 - Addeded in depth Python comments
-  
+- Added in a clue number function that makes the website more user friednly by showing the number represented with the position on the crossword grid and clue area
+    
 ### Fayaaz:
 - Identifying and ranking potential risks to projects success
 - Software development strategy
