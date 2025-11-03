@@ -184,3 +184,8 @@ Our crossword game follows a simple system to track the players these sates are 
 - Some code for main py file
 - Joined the project late on, coming from a HTML, CSS, JavaScript project.
 - Made the original CSS file for the host website. Changed to inline style. 
+
+### Refrences:
+- Codingal. (n.d.). Crossword Puzzle Python Tutorial: Create Fun Games Easily. Available at: https://www.codingal.com/coding-for-kids/blog/crossword-puzzle-python
+
+- Stack Overflow. (2009). Algorithm to generate a crossword [closed]. Available at: https://stackoverflow.com/questions/943113/algorithm-to-generate-a-crossword
