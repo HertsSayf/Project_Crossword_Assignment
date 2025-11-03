@@ -120,13 +120,21 @@ Our crossword game follows a simple system to track the players these sates are 
 - User Profiles
 - HTML Code
 - Game state management
+- Added game fetures like the timer and more
+- Test Plan
+- medium and hard crossword grid mock-ups
 
 ### Sayfullah:
-- Main parts of the game
-- HTML Code
+- Developed Main Game, Including the Easy, Medium and Hard Modes
+- Developed Main Game HTML Code for the website
+- Created working crossword.py and index.html uptill the modes features
 - Created Git Hub repository
 - Compilation of the files and game
 - Tested out to see core functionality of the game
+- Created mock ups
+- Visually representation of the User Profiles
+- Created Crossword grids on excel to find coords
+- Easy clues crossword grid mock-ups
 
 ### Fayaaz:
 - Identifying and ranking potential risks to projects success
@@ -137,5 +145,5 @@ Our crossword game follows a simple system to track the players these sates are 
 
 ### Kalid:
 - Flowchart
-- Some code for original python file of the game
+- Some code for main py file
 
