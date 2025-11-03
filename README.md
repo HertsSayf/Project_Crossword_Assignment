@@ -23,7 +23,11 @@ Once we get the game up and running, we plan to add 2 extra difficulties:
 	## Software plan and language
   	- Python with Flask was selected as the core development method because it is quick, lightweight, and easy to build with.
    -  This project focuses on backend game flow, so Python offers better structure and control than a fully front-end approach.
-   -    
+     
+## Kalid joined later in the project, his chosen method was JavaScript. Some points of research:
+   -  JavaScript enables dynamic front-end interaction, making the UI more responsive without page reloads.
+   -  JavaScript can handle live input validation and clue updates directly in the browser for smoother gameplay
+   -  JavaScript is widely supported across all browsers, making the game accessible and easy to run on any device.
 
 
 ## User profiles:
