@@ -3,10 +3,10 @@
 	<head>
 	  <meta charset="UTF-8" />
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	  <title>Crazy Crosswords</title> <!-- Title of page will be shown at the top -->
+	  <title>Crazy Crosswords</title>
 	  <style>
 		body {
-		  font-family: Arial, sans-serif;  /*styling the page, font, colour etc*/
+		  font-family: Arial, sans-serif;
 		  background-color: #f4f4f4;
 		  text-align: center;
 		  margin: 20px;
@@ -16,7 +16,7 @@
 		  color: #333;
 		}
 
-		.grid { /*doin the layout of the grid */
+		.grid {
 		  display: inline-block;
 		  border-collapse: collapse;
 		  margin: 20px auto;
@@ -27,7 +27,7 @@
 		  justify-content: center;
 		}
 
-		.cell { /* making the cells */
+		.cell {
 		  width: 50px;
 		  height: 50px;
 		  border: 2px solid #333;
@@ -83,12 +83,6 @@
 		b {
 		  color: #008000;
 		}
-		.correct {
-		  color: #008000;
-		}
-		.wrong {
-		  color: #ff0000;
-		}
 		.number {
   position: absolute;
   top: 2px;
@@ -104,30 +98,30 @@
 	</head>
 	<body>
 	  <h1>Crazy Crosswords</h1>
-	  <div id="timer-container" style="margin: 15px;"> <!-- this section is to dot woth the timer. creating buttons to stop start and reset the timer-->
+	  <div id="timer-container" style="margin: 15px;">
 	  <span style="font-size: 20px; font-weight: bold;">⏱️ Time: </span>
 	  <span id="timer" style="font-size: 20px;">0:00</span><br><br>
-	  <button type="button" onclick="startTimer()">Start</button> 
+	  <button type="button" onclick="startTimer()">Start</button>
 	  <button type="button" onclick="stopTimer()">Stop</button>
 	  <button type="button" onclick="resetTimer()">Reset</button>
 	</div>
 	  <form method="POST">
-		<label><b>Choose difficulty:</b></label> <!-- allows the user to choose what diifculty they want to select  -->
+		<label><b>Choose difficulty:</b></label>
 	<select name="difficulty" onchange="this.form.submit()">
-	  <option value="easy" {% if difficulty == 'easy' %}selected{% endif %}>Easy</option> <!-- selecting the easy option-->
-	  <option value="medium" {% if difficulty == 'medium' %}selected{% endif %}>Medium</option> <!-- selecting the medium option-->
-	  <option value="hard" {% if difficulty == 'hard' %}selected{% endif %}>Hard</option> <!-- selecting the hard option-->
+	  <option value="easy" {% if difficulty == 'easy' %}selected{% endif %}>Easy</option>
+	  <option value="medium" {% if difficulty == 'medium' %}selected{% endif %}>Medium</option>
+	  <option value="hard" {% if difficulty == 'hard' %}selected{% endif %}>Hard</option>
 	</select>
 	  </form>
 
 	  <div class="grid">
-  {% for row in grid_layout %} <!--loops through each row in the crossword-->
+  {% for row in grid_layout %}
     <div class="row">
       {% for cell in row %}
         {% if cell.letter %}
-		  <div class="cell {% if cell.letter != '?' %}guessed{% endif %}" onclick="showClue('{{ cell.number or 0 }}')">
+          <div class="cell {% if cell.letter != '?' %}guessed{% endif %}" onclick="showClue({{ cell.number or 0 }})">
             {% if cell.number %}
-              <span class="number">{{ cell.number }}</span>  <!-- this shows a number at the start of the word -->
+              <span class="number">{{ cell.number }}</span>
             {% endif %}
             {{ cell.letter }}
           </div>
@@ -136,14 +130,14 @@
         {% endif %}
       {% endfor %}
     </div>
-	  {% if message %}
-		 <p class="{{ 'correct' if '✅' in message else 'wrong' }}" style="font-size:18px; font-weight:bold;"> <!-- outputs a message after the user guesses (green for correct, red for wrong) -->
-		  {{ message }}
-	  </p>
-	  {% endif %}
+  {% endfor %}
+</div>
+<div id="clue-box" style="margin-top: 20px; font-size: 18px; font-weight: bold;"></div>
+
+
 	  <div class="form-container">
 	  {% if message %}
-		 <p class="{{ 'correct' if '✅' in message else 'wrong' }}" style="font-size:18px; font-weight:bold;"> <!-- outputs a message after the user guesses (green for correct, red for wrong) -->
+		 <p style="font-size:18px; font-weight:bold; color:{% if '✅' in message %}green{% else %}red{% endif %};">
 		  {{ message }}
 	  </p>
 	  {% endif %}
@@ -167,28 +161,28 @@
 	  </ul>
 	  <script>
 	  let timerInterval;
-	  let totalSeconds = 0; // this keeps track of how many seconds have passed 
-	  let isRunning = false; // this is to check whether the timer is running or not 
+	  let totalSeconds = 0;
+	  let isRunning = false;
 
 	  function updateTimerDisplay() {
 		const minutes = Math.floor(totalSeconds / 60);
-		const seconds = totalSeconds % 60; // this formats the timer so it shows on screen in minutes and seconds
+		const seconds = totalSeconds % 60;
 		document.getElementById("timer").textContent =
 		  `${minutes}:${seconds.toString().padStart(2, "0")}`;
 	  }
 
-	  function startTimer() { // this functoin starts counting up every second 
+	  function startTimer() {
 		if (!isRunning) {
 		  isRunning = true;
-		  timerInterval = setInterval(() => { 
+		  timerInterval = setInterval(() => {
 			totalSeconds++;
 			updateTimerDisplay();
-		  }, 1000); // 1000 millesecond = 1 second
+		  }, 1000);
 		}
 	  }
 
-	  function stopTimer() { 
-		clearInterval(timerInterval); // this stops the timer from counting 
+	  function stopTimer() {
+		clearInterval(timerInterval);
 		isRunning = false;
 	  }
 
@@ -198,17 +192,14 @@
 		updateTimerDisplay();
 	  }
 	</script>
-<script>
-  const cluesData = '{{ clues | tojson | safe }}';
-
-  function showClue(num) {
-	const clueBox = document.getElementById('clue-box');
-	if (cluesData && cluesData[num]) {
-	  clueBox.textContent = cluesData[num];
-	} else {
-	  clueBox.textContent = '';
-	}
-  }
+	<script>
+ <script>
+  const clues = {
+    {% for word, clue in clues.items() %}
+      {{ loop.index }}: "{{ clue }}",
+    {% endfor %}
+  };
+</script>
 </script>
 	</body>
 	</html>
