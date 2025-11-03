@@ -48,3 +48,5 @@
 ## Figure 11: correct message
 <img width="428" height="410" alt="image" src="https://github.com/user-attachments/assets/3ccf9ce4-1eec-475e-83eb-56c6a2b110a2" />
 
+## Figure 12: number correlates on grid
+
