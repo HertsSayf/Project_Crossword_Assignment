@@ -47,15 +47,19 @@ def build_grid(words):
     #Compute the number of columns needed: for 'across' words add length to col, else +1 col
     max_col = max(c + (len(w) if d.lower() == "across" else 1) for _, w, r, c, d in words)  
     #Initializes an empty grid using none
-    grid = [[None for _ in range(max_col)] for _ in range(max_row)]  
+    grid = [[{"letter": None, "number": None} for _ in range(max_col)] for _ in range(max_row)]  
 
     #Places each letter of each word into the grid at the correct coords
-    for _, word, row, col, direction in words:
+    for num, word, row, col, direction in words:
         for i, ch in enumerate(word):           #loop over letters of the word using enumerate, ch - the letter at index position
             if direction.lower() == "across":   #If across advance column by the index number
-                grid[row][col + i] = ch
+                grid[row][col + i]["letter"] = ch
+                if i == 0:
+                    grid[row][col + i]["number"] = num
             elif direction.lower() == "down":   #If down, advance row by i
-                grid[row + i][col] = ch
+                grid[row + i][col]["letter"] = ch
+                if i == 0:
+                    grid[row + i][col]["number"] = num
     return grid                                 #Returns the filled grid, including None where there are no letters)
 
 
@@ -89,6 +93,13 @@ grid_sets = {                             #this links each difficulty to its own
     "easy": build_grid(easy_words),
     "medium": build_grid(medium_words),
     "hard": build_grid(hard_words),
+}
+
+#This links each difficulty to a numbered set of clues for easier clue referencing
+numbered_clues = {
+    "easy": {1: "SWIFT", 2: "JAVA", 3: "PYTHON", 4: "KOTLIN", 5: "RUBY"},
+    "medium": {1: "VARIABLE", 2: "SYNTAX", 3: "FUNCTION", 4: "BOOLEAN", 5: "LOOP"},
+    "hard": {1: "COMPILE", 2: "ENCRYPTION", 3: "ALGORITHM", 4: "RECURSION", 5: "DEBUGGING"},
 }
 
 
@@ -132,13 +143,16 @@ def home():
         visible_row = []
         for cell in row:
                                            #If cell contains a letter, check if it should be revealed
-            if cell is not None:
+            if cell["letter"]:
                                            #Reveal if the letter belongs to any guessed word
-                revealed = any(cell in word for word in guessed_words)
-                visible_row.append(cell if revealed else "?")
+                revealed = any(cell["letter"] in word for word in guessed_words)
+                visible_row.append({
+                    "letter": cell["letter"] if revealed else "?",
+                    "number": cell["number"]
+                })
             else:
                                            #Keep empty spaces as None
-                visible_row.append(None)
+                visible_row.append({"letter": None, "number": None})
         visible_grid.append(visible_row)
 
     return render_template(                #links data to the webpage 
@@ -148,6 +162,7 @@ def home():
         clues=clue_sets[current_difficulty],
         guessed_words=guessed_words,
         message=message,
+        numbered_clues=numbered_clues[current_difficulty],
     )
 
 
