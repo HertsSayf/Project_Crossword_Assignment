@@ -112,3 +112,26 @@ Our crossword game follows a simple system to track the players these sates are 
 ### Win - Win will be achieved when the user manages to complete and solve all the words in the grid correctly. We have implemented a timer that goes up so users can time how quickly they complete the crossword.
 ### lose - Since the crossword does not have a lives system or a time limit to complete the crossword in, it does not have a lose state. However, the game does display an incorrect message when the user inputs an incorrect word.
 ### Draw - this state does not apply to our crossword however it could be added if we include a multiplayer feature in the future however that would require more time and resources.
+
+## Contribution to Project
+### Rayyan:
+Basic Storyboard
+User and System Requirements
+User Profiles
+HTML Code
+Game state management
+
+### Sayfullah:
+Main parts of the game
+HTML Code
+Created Git Hub repository
+
+### Fayaaz:
+Identifying and ranking potential risks to projects success
+Software development strategy
+Original basic version of game on main py file
+Clues for the game
+
+### Kalid:
+Flowchart
+
