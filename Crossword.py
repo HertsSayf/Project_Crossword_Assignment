@@ -42,14 +42,16 @@ clue_sets = {"easy": easy_clues, "medium": medium_clues, "hard": hard_clues} #st
 
 def build_grid(words):
     """Creates crossword grid from the provided positions."""
-    max_row = max(r + (len(w) if d.lower() == "down" else 1) for w, r, c, d in words)  #Compute the number of rows needed: for 'down' words add length to row, else +1 row
-    max_col = max(c + (len(w) if d.lower() == "across" else 1) for w, r, c, d in words)  #Compute the number of columns needed: for 'across' words add length to col, else +1 col
-    grid = [[None for _ in range(max_col)] for _ in range(max_row)]  #Initializes an empty grid using none
+    #Compute the number of rows needed: for 'down' words add length to row, else +1 row
+    max_row = max(r + (len(w) if d.lower() == "down" else 1) for _, w, r, c, d in words)  
+    #Compute the number of columns needed: for 'across' words add length to col, else +1 col
+    max_col = max(c + (len(w) if d.lower() == "across" else 1) for _, w, r, c, d in words)  
+    #Initializes an empty grid using none
+    grid = [[None for _ in range(max_col)] for _ in range(max_row)]  
 
-#Places each letter of each word into the grid at the correct coords
-    
-    for word, row, col, direction in words:
-        for i, ch in enumerate(word):           #loop over letters of the word usimg enumerate, ch - the letter at index position
+    #Places each letter of each word into the grid at the correct coords
+    for _, word, row, col, direction in words:
+        for i, ch in enumerate(word):           #loop over letters of the word using enumerate, ch - the letter at index position
             if direction.lower() == "across":   #If across advance column by the index number
                 grid[row][col + i] = ch
             elif direction.lower() == "down":   #If down, advance row by i
@@ -83,20 +85,19 @@ hard_words = [
     (5, "DEBUGGING", 15, 0, "across"),
 ]
 
-grid_sets = { # this links each difficulty to its own crossword grid 
+grid_sets = {                             #this links each difficulty to its own crossword grid 
     "easy": build_grid(easy_words),
     "medium": build_grid(medium_words),
     "hard": build_grid(hard_words),
 }
 
 
-# Game State
+#Game State
 guessed_words = []
 current_difficulty = "easy"
 
 
-# Routes
-
+#Routes
 @app.route("/", methods=["GET", "POST"])
 def home():
     global guessed_words, current_difficulty
@@ -104,13 +105,13 @@ def home():
     message = None 
 
     if request.method == "POST":
-        # Handle difficulty change
+                                           #Handle difficulty change
         if "difficulty" in request.form:
             current_difficulty = request.form["difficulty"]
             guessed_words = []
             message = None
 
-        # Handle guessed words
+                                           #Handle guessed words
         elif "word" in request.form:
             word = request.form["word"].upper()
             if word in clue_sets[current_difficulty]:
@@ -120,27 +121,27 @@ def home():
             else:
                 message = f"❌ Incorrect! '{word}' is not in this crossword."
 
-        # when the user resets the board 
-        elif "reset" in request.form:
+        elif "reset" in request.form:      #when the user resets the board 
             guessed_words = []
             message = None
 
     full_grid = grid_sets[current_difficulty]
-
-    # this shows the words when guessed and filles the rest with question marks 
-    visible_grid = []
+                                          
+    visible_grid = []                      #this shows the words when guessed and fills the rest with question marks 
     for row in full_grid:
         visible_row = []
         for cell in row:
-            letter = cell["letter"]
-            number = cell["number"]
-            if letter and any(letter in word for word in guessed_words):
-                visible_row.append({"letter": letter, "number": number})
+                                           #If cell contains a letter, check if it should be revealed
+            if cell is not None:
+                                           #Reveal if the letter belongs to any guessed word
+                revealed = any(cell in word for word in guessed_words)
+                visible_row.append(cell if revealed else "?")
             else:
-                visible_row.append({"letter": "?" if letter else None, "number": number})
+                                           #Keep empty spaces as None
+                visible_row.append(None)
         visible_grid.append(visible_row)
 
-    return render_template( # links data to the webpage 
+    return render_template(                #links data to the webpage 
         "index.html",
         grid_layout=visible_grid,
         difficulty=current_difficulty,
@@ -152,9 +153,3 @@ def home():
 
 if __name__ == "__main__":
     app.run(debug=True, use_reloader=False)
-
-
-
-
-
-
