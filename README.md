@@ -115,14 +115,28 @@ Our crossword game follows a simple system to track the players these sates are 
 
 ## Contribution to Project
 ### Rayyan:
+- Delegated tasks to other members and gave them deadlines for completion
 - Basic Storyboard
 - User and System Requirements
 - User Profiles
-- HTML Code
-- Game state management
-- Added game fetures like the timer and more
-- Test Plan
+- Refined the html code and added new features
+- Refined the Pyhton code and added new features
+- Added comments onto the html
+- Added comments onto the Python 
+- Done game state management
+- Added a timer feature to the game
+- Added numbers to the grid to coorelate to the word
+- Done the whole test plan, regularly updating it 
 - medium and hard crossword grid mock-ups
+- Tested different versions of the code
+- Included screenshots of results of tests
+- created meduim clues
+- created hard clues
+- Wrote functional requirments
+- Wrote non functional requirments
+- Wrote software requirments
+- Wrote Hardware requirments
+- Wrote the overall project specification 
 
 ### Sayfullah:
 - Developed Main Game, Including the Easy, Medium and Hard Modes
@@ -132,7 +146,7 @@ Our crossword game follows a simple system to track the players these sates are 
 - Compilation of the files and game
 - Tested out to see core functionality of the game
 - Created mock ups
-- Visually representation of the User Profiles
+- Visual representation of the User Profiles
 - Created Crossword grids on excel to find coords
 - Easy clues crossword grid mock-ups
 
