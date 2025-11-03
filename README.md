@@ -20,6 +20,11 @@ Once we get the game up and running, we plan to add 2 extra difficulties:
   - Easy: shorter simpler words (tailored for students)
   - Hard: Longer more challenging words (better for teachers)
 
+	## Software plan and language
+  	- Python with Flask was selected as the core development method because it is quick, lightweight, and easy to build with.
+   -  This project focuses on backend game flow, so Python offers better structure and control than a fully front-end approach.
+   -    
+
 
 ## User profiles:
 <img width="374" height="543" alt="image" src="https://github.com/user-attachments/assets/4086df15-c5d0-4309-822a-a725b45cf385" />
