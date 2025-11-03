@@ -165,7 +165,7 @@ Our crossword game follows a simple system to track the players these sates are 
 - Designed the game state system to handle guessed words and difficulty switching.
 - Tested out to see core functionality of the game
 - Implemented word validation, clue checking, and grid updating so that correct guesses reveal automatically.
-- Created mock ups
+- Created mock ups for the basic storyboard and website
 - Visual representation of the User Profiles
 - Created Crossword grids on excel to find coords
 - Easy clues crossword grid mock-ups
