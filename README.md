@@ -139,17 +139,24 @@ Our crossword game follows a simple system to track the players these sates are 
 - Wrote the overall project specification 
 
 ### Sayfullah:
-- Developed Main Game, Including the Easy, Medium and Hard Modes
-- Developed Main Game HTML Code for the website
-- Created working crossword.py and index.html uptill the modes features
 - Created Git Hub repository
-- Compilation of the files and game
+- Created the Flask link to python file
+- Connected the backend with the HTML template using Flask’s render_template() for live updates in the web app.
+- Developed Main Game, Including the Easy, Medium and Hard Modes:
+- Created all the functions and backend logic for the crossword application using Python and Flask
+- Developed the build_grid() function to dynamically generate crossword grids and the home() route to manage gameplay, user input, and difficulty levels.
+- Wrote and organised all clue dictionaries and word lists for the easy, medium, and hard crosswords.
+- Developed Main Game and Game modes HTML Code for the website
+- Created working crossword.py and index.html uptill the modes features
+- Designed the game state system to handle guessed words and difficulty switching.
 - Tested out to see core functionality of the game
+- Implemented word validation, clue checking, and grid updating so that correct guesses reveal automatically.
 - Created mock ups
 - Visual representation of the User Profiles
 - Created Crossword grids on excel to find coords
 - Easy clues crossword grid mock-ups
-
+- Addeded in depth Python comments
+  
 ### Fayaaz:
 - Identifying and ranking potential risks to projects success
 - Software development strategy
